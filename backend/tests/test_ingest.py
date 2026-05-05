@@ -36,13 +36,13 @@ def test_ingest_txt_file():
     assert "LEGRAND" in source.raw_text
 
 
-def test_ingest_all_100_samples():
-    """Verify all 100 sample files can be ingested without errors."""
+def test_ingest_all_samples():
+    """Verify all sample files can be ingested without errors."""
     sample_files = sorted(
         f for f in SAMPLES_DIR.iterdir()
         if f.is_file() and f.name != "README.md"
     )
-    assert len(sample_files) == 100, f"Expected 100 samples, found {len(sample_files)}"
+    assert len(sample_files) >= 100, f"Expected >=100 samples, found {len(sample_files)}"
 
     for f in sample_files:
         source = ingest_file(f)

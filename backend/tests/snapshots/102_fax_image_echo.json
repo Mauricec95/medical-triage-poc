@@ -1,0 +1,49 @@
+{
+  "patient": {
+    "full_name": "Fatima BENALI\nD",
+    "dob": null,
+    "sex": "F",
+    "phone": "07 88 99 00 11",
+    "email": null,
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Antoine MERCIER",
+    "specialty": "Endocrinologie",
+    "service": null,
+    "hospital_or_clinic": "Clinique Montchat\n\nDemande d",
+    "phone": null,
+    "email": null
+  },
+  "exam": {
+    "modality": "echo",
+    "region": null,
+    "with_injection": null,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Nodule thyroidien decouvert",
+  "required_attachments": [],
+  "missing_fields": [
+    {
+      "field_path": "patient.dob",
+      "reason": "Date de naissance absente",
+      "suggested_question_fr": "Quelle est la date de naissance du patient ?"
+    },
+    {
+      "field_path": "prescriber.phone",
+      "reason": "Aucun contact du prescripteur (téléphone ou email)",
+      "suggested_question_fr": "Pourriez-vous nous fournir un numéro de téléphone ou un email pour joindre le prescripteur ?"
+    }
+  ],
+  "routing": {
+    "next_action": "contact_prescriber",
+    "target_contact": null,
+    "rationale_fr": "Informations du prescripteur manquantes — le contacter en priorité."
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen echo ([Région anatomique])\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen echo pour le patient Fatima BENALI\nD, adressée par le Dr Dr Antoine MERCIER.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  - Quelle est la date de naissance du patient ?\n  - Pourriez-vous nous fournir un numéro de téléphone ou un email pour joindre le prescripteur ?\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
+  "confidence": 0.7,
+  "source": {
+    "channel": "fax"
+  }
+}

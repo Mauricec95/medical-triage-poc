@@ -1,39 +1,29 @@
 {
   "patient": {
-    "full_name": "Robert MARTINEZ\nN",
-    "dob": "30/11/1947",
+    "full_name": "Hassan EL FASSI\nN",
+    "dob": null,
     "sex": "M",
     "phone": null,
     "email": null,
     "ssn_last4_optional": null
   },
   "prescriber": {
-    "full_name": "Dr Jean-",
-    "specialty": "Chirurgie digestive",
+    "full_name": "Dr Nathalie VINCENT",
+    "specialty": "Neurologie",
     "service": null,
-    "hospital_or_clinic": "Clinique Montchat\n\nDEMANDE D",
-    "phone": "04 78 33 44 55",
+    "hospital_or_clinic": "CHU Lyon\nTel",
+    "phone": null,
     "email": null
   },
   "exam": {
     "modality": "scanner",
-    "region": "thoraco-abdomino-pelvien",
-    "with_injection": true,
+    "region": "cerebral",
+    "with_injection": false,
     "protocol_notes": null,
-    "urgency": "routine"
+    "urgency": "urgent"
   },
-  "clinical_indication": "Bilan d'extension — néoplasie colique opérée le 02/04/2025",
+  "clinical_indication": "Cephalees brutales avec vomissements",
   "required_attachments": [
-    {
-      "name": "créatinine",
-      "present": false,
-      "notes": null
-    },
-    {
-      "name": "créat",
-      "present": false,
-      "notes": null
-    },
     {
       "name": "allergies",
       "present": false,
@@ -42,19 +32,24 @@
   ],
   "missing_fields": [
     {
-      "field_path": "required_attachments.creatinine",
-      "reason": "Scanner avec injection : résultat de créatinine requis",
-      "suggested_question_fr": "Un scanner avec injection est demandé. Pourriez-vous fournir le résultat de créatinine récent du patient ?"
+      "field_path": "patient.dob",
+      "reason": "Date de naissance absente",
+      "suggested_question_fr": "Quelle est la date de naissance du patient ?"
+    },
+    {
+      "field_path": "prescriber.phone",
+      "reason": "Aucun contact du prescripteur (téléphone ou email)",
+      "suggested_question_fr": "Pourriez-vous nous fournir un numéro de téléphone ou un email pour joindre le prescripteur ?"
     }
   ],
   "routing": {
-    "next_action": "await_radiologist_validation",
+    "next_action": "contact_prescriber",
     "target_contact": null,
-    "rationale_fr": null
+    "rationale_fr": "Informations du prescripteur manquantes — le contacter en priorité."
   },
-  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen scanner (thoraco-abdomino-pelvien)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen scanner pour le patient Robert MARTINEZ\nN, adressée par le Dr Dr Jean-.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  - Un scanner avec injection est demandé. Pourriez-vous fournir le résultat de créatinine récent du patient ?\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
+  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen scanner (cerebral)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen scanner pour le patient Hassan EL FASSI\nN, adressée par le Dr Dr Nathalie VINCENT.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  - Quelle est la date de naissance du patient ?\n  - Pourriez-vous nous fournir un numéro de téléphone ou un email pour joindre le prescripteur ?\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
   "confidence": 0.7,
   "source": {
-    "channel": "email"
+    "channel": "fax"
   }
 }
