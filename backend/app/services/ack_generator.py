@@ -13,7 +13,7 @@ def generate_ack(request: MedicalRequest) -> str:
     lines = [
         f"Objet : Accusé de réception — Demande d'examen {exam_type} ({region})",
         "",
-        f"Madame, Monsieur,",
+        "Madame, Monsieur,",
         "",
         f"Nous accusons bonne réception de votre demande d'examen "
         f"{exam_type} pour le patient {patient_name}, "

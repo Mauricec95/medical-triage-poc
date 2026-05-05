@@ -1,0 +1,44 @@
+{
+  "patient": {
+    "full_name": "Julie DUVAL",
+    "dob": "15/01/2010",
+    "sex": "F",
+    "phone": "07 62 16 34 76",
+    "email": "dr.jeanmarc.blanc@chu-lyon.fr",
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Jean-",
+    "specialty": "Gynécologie",
+    "service": null,
+    "hospital_or_clinic": "Centre Hospitalier de Villefranche\nTél",
+    "phone": "04 66 89 73 90",
+    "email": "dr.jeanmarc.blanc@chu-lyon.fr"
+  },
+  "exam": {
+    "modality": "IRM",
+    "region": "mammaire",
+    "with_injection": true,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Bilan complémentaire après mammographie ACR4",
+  "required_attachments": [
+    {
+      "name": "ordonnance",
+      "present": true,
+      "notes": null
+    }
+  ],
+  "missing_fields": [],
+  "routing": {
+    "next_action": "await_radiologist_validation",
+    "target_contact": null,
+    "rationale_fr": null
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen IRM (mammaire)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen IRM pour le patient Julie DUVAL, adressée par le Dr Dr Jean-.\n\nVotre demande est complète et sera traitée dans les meilleurs délais. Nous vous recontacterons pour confirmer le créneau de rendez-vous.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
+  "confidence": 0.7,
+  "source": {
+    "channel": "email"
+  }
+}

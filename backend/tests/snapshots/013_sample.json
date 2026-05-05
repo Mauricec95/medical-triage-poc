@@ -1,0 +1,49 @@
+{
+  "patient": {
+    "full_name": "Isabelle MARTINEZ",
+    "dob": "20/11/1977",
+    "sex": "F",
+    "phone": "06 47 20 39 22",
+    "email": "i.martinez@laposte.net",
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Marc MARECHAL",
+    "specialty": "Endocrinologie",
+    "service": null,
+    "hospital_or_clinic": "Clinique Mutualiste\nTél secrétariat",
+    "phone": "04 55 68 91 56",
+    "email": "dr.marc.marechal@clinique-sj.fr"
+  },
+  "exam": {
+    "modality": "scanner",
+    "region": "rachis lombaire",
+    "with_injection": false,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Lombalgies chroniques résistantes au traitement",
+  "required_attachments": [
+    {
+      "name": "ordonnance",
+      "present": true,
+      "notes": null
+    },
+    {
+      "name": "allergies",
+      "present": true,
+      "notes": null
+    }
+  ],
+  "missing_fields": [],
+  "routing": {
+    "next_action": "await_radiologist_validation",
+    "target_contact": null,
+    "rationale_fr": null
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen scanner (rachis lombaire)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen scanner pour le patient Isabelle MARTINEZ, adressée par le Dr Dr Marc MARECHAL.\n\nVotre demande est complète et sera traitée dans les meilleurs délais. Nous vous recontacterons pour confirmer le créneau de rendez-vous.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
+  "confidence": 0.7,
+  "source": {
+    "channel": "email"
+  }
+}

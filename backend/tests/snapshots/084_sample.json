@@ -1,0 +1,44 @@
+{
+  "patient": {
+    "full_name": "Amina GAILLARD",
+    "dob": null,
+    "sex": "F",
+    "phone": "06 52 22 81 96",
+    "email": null,
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Sandrine MERCIER",
+    "specialty": "ORL",
+    "service": null,
+    "hospital_or_clinic": "Clinique de la Sauvegarde\nTél",
+    "phone": "04 69 46 42 94",
+    "email": "dr.sandrine.mercier@chu-st-etienne.fr"
+  },
+  "exam": {
+    "modality": "echo",
+    "region": "abdominale",
+    "with_injection": null,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Hépatomégalie à l'examen clinique",
+  "required_attachments": [],
+  "missing_fields": [
+    {
+      "field_path": "patient.dob",
+      "reason": "Date de naissance absente",
+      "suggested_question_fr": "Quelle est la date de naissance du patient ?"
+    }
+  ],
+  "routing": {
+    "next_action": "contact_patient",
+    "target_contact": "06 52 22 81 96",
+    "rationale_fr": "Informations du patient incomplètes — le contacter."
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen echo (abdominale)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen echo pour le patient Amina GAILLARD, adressée par le Dr Dr Sandrine MERCIER.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  - Quelle est la date de naissance du patient ?\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
+  "confidence": 0.7,
+  "source": {
+    "channel": "email"
+  }
+}

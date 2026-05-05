@@ -1,0 +1,14 @@
+De : dr.laurent.marechal@chu-lyon.fr
+À : secretariat.radio@clinique-montchat.fr
+Objet : Demande d'examen pour un patient
+
+Bonjour,
+
+J'aurais besoin de programmer un scanner coronaire (coroscanner) avec injection pour un de mes patients.
+
+Douleur thoracique atypique. Examen à programmer.
+
+Je vous rappellerai avec les coordonnées du patient.
+
+Dr Laurent MARECHAL
+Neurologie — Clinique du Val d'Ouest

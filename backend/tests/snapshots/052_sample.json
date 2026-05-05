@@ -1,0 +1,44 @@
+{
+  "patient": {
+    "full_name": "Louise GARNIER",
+    "dob": "16/09/2004",
+    "sex": "F",
+    "phone": "06 96 83 85 12",
+    "email": "dr.olivier.lefevre@hopital-croix-rousse.fr",
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Olivier LEFÈVRE",
+    "specialty": "Pédiatrie",
+    "service": null,
+    "hospital_or_clinic": "Hôpital de la Croix-Rousse\nTél",
+    "phone": "04 54 83 15 32",
+    "email": "dr.olivier.lefevre@hopital-croix-rousse.fr"
+  },
+  "exam": {
+    "modality": "scanner",
+    "region": "thoracique",
+    "with_injection": null,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Bilan de nodule pulmonaire",
+  "required_attachments": [],
+  "missing_fields": [
+    {
+      "field_path": "exam.with_injection",
+      "reason": "Injection non précisée pour cet examen",
+      "suggested_question_fr": "L'examen est-il demandé avec ou sans injection de produit de contraste ?"
+    }
+  ],
+  "routing": {
+    "next_action": "await_radiologist_validation",
+    "target_contact": null,
+    "rationale_fr": null
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen scanner (thoracique)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen scanner pour le patient Louise GARNIER, adressée par le Dr Dr Olivier LEFÈVRE.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  - L'examen est-il demandé avec ou sans injection de produit de contraste ?\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
+  "confidence": 0.7,
+  "source": {
+    "channel": "email"
+  }
+}

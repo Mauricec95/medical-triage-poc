@@ -1,0 +1,44 @@
+{
+  "patient": {
+    "full_name": "Amina LEFEVRE",
+    "dob": "26/08/2005",
+    "sex": "F",
+    "phone": "06 96 49 38 35",
+    "email": null,
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Marc BARBIER",
+    "specialty": "Orthopédie",
+    "service": null,
+    "hospital_or_clinic": "Clinique Saint-Joseph",
+    "phone": null,
+    "email": "dr.marc.barbier@hopital-croix-rousse.fr"
+  },
+  "exam": {
+    "modality": "IRM",
+    "region": "mammaire",
+    "with_injection": true,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": null,
+  "required_attachments": [],
+  "missing_fields": [
+    {
+      "field_path": "clinical_indication",
+      "reason": "Indication clinique absente",
+      "suggested_question_fr": "Quelle est l'indication clinique justifiant cet examen ?"
+    }
+  ],
+  "routing": {
+    "next_action": "await_radiologist_validation",
+    "target_contact": null,
+    "rationale_fr": null
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen IRM (mammaire)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen IRM pour le patient Amina LEFEVRE, adressée par le Dr Dr Marc BARBIER.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  - Quelle est l'indication clinique justifiant cet examen ?\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
+  "confidence": 0.7,
+  "source": {
+    "channel": "email"
+  }
+}

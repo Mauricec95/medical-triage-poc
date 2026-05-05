@@ -1,0 +1,50 @@
+{
+  "patient": {
+    "full_name": "Amina CHEVALIER\nN",
+    "dob": "14/10/1963",
+    "sex": "F",
+    "phone": null,
+    "email": null,
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr LECLERC (tampon lisible)",
+    "specialty": null,
+    "service": null,
+    "hospital_or_clinic": null,
+    "phone": null,
+    "email": null
+  },
+  "exam": {
+    "modality": "echo",
+    "region": "mammaire",
+    "with_injection": null,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Masse palpable sein gauche",
+  "required_attachments": [
+    {
+      "name": "ordonnance",
+      "present": false,
+      "notes": null
+    }
+  ],
+  "missing_fields": [
+    {
+      "field_path": "prescriber.phone",
+      "reason": "Aucun contact du prescripteur (téléphone ou email)",
+      "suggested_question_fr": "Pourriez-vous nous fournir un numéro de téléphone ou un email pour joindre le prescripteur ?"
+    }
+  ],
+  "routing": {
+    "next_action": "contact_prescriber",
+    "target_contact": null,
+    "rationale_fr": "Informations du prescripteur manquantes — le contacter en priorité."
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen echo (mammaire)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen echo pour le patient Amina CHEVALIER\nN, adressée par le Dr Dr LECLERC (tampon lisible).\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  - Pourriez-vous nous fournir un numéro de téléphone ou un email pour joindre le prescripteur ?\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
+  "confidence": 0.7,
+  "source": {
+    "channel": "email"
+  }
+}

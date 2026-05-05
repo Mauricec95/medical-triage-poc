@@ -1,0 +1,59 @@
+{
+  "patient": {
+    "full_name": "Claire PETIT",
+    "dob": "18/09/2018",
+    "sex": "F",
+    "phone": null,
+    "email": "claire.petit@outlook.fr",
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Philippe MOREAU",
+    "specialty": "Neuropédiatrie",
+    "service": null,
+    "hospital_or_clinic": "Hôpital Femme Mère Enfant\nTél secrétariat",
+    "phone": "04 27 85 56 67",
+    "email": "dr.philippe.moreau@hopital-femme-mere-enfant.fr"
+  },
+  "exam": {
+    "modality": "IRM",
+    "region": "cérébrale pédiatrique",
+    "with_injection": true,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Céphalées chroniques depuis 3 mois avec vomissements matinaux récents. Fond d'œil : œdème papillaire bilatéral. Suspicion de processus expansif intracrânien. Bilan en urgence relative",
+  "required_attachments": [
+    {
+      "name": "ordonnance",
+      "present": true,
+      "notes": null
+    },
+    {
+      "name": "créatinine",
+      "present": true,
+      "notes": null
+    },
+    {
+      "name": "créat",
+      "present": true,
+      "notes": null
+    },
+    {
+      "name": "cr ",
+      "present": true,
+      "notes": null
+    }
+  ],
+  "missing_fields": [],
+  "routing": {
+    "next_action": "await_radiologist_validation",
+    "target_contact": null,
+    "rationale_fr": null
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen IRM (cérébrale pédiatrique)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen IRM pour le patient Claire PETIT, adressée par le Dr Dr Philippe MOREAU.\n\nVotre demande est complète et sera traitée dans les meilleurs délais. Nous vous recontacterons pour confirmer le créneau de rendez-vous.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
+  "confidence": 0.7,
+  "source": {
+    "channel": "email"
+  }
+}

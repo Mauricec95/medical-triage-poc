@@ -1,0 +1,44 @@
+{
+  "patient": {
+    "full_name": "Pierre CHEVALIER",
+    "dob": null,
+    "sex": "M",
+    "phone": "06 39 74 87 13",
+    "email": null,
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Pascale HAMMADI",
+    "specialty": "Médecine du sport",
+    "service": null,
+    "hospital_or_clinic": "Clinique Saint-Joseph\nTél",
+    "phone": "04 91 35 93 99",
+    "email": "dr.pascale.hammadi@hopital-croix-rousse.fr"
+  },
+  "exam": {
+    "modality": "radio",
+    "region": "rachis cervical",
+    "with_injection": null,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Cervicalgies post-traumatiques (AVP)",
+  "required_attachments": [],
+  "missing_fields": [
+    {
+      "field_path": "patient.dob",
+      "reason": "Date de naissance absente",
+      "suggested_question_fr": "Quelle est la date de naissance du patient ?"
+    }
+  ],
+  "routing": {
+    "next_action": "contact_patient",
+    "target_contact": "06 39 74 87 13",
+    "rationale_fr": "Informations du patient incomplètes — le contacter."
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen radio (rachis cervical)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen radio pour le patient Pierre CHEVALIER, adressée par le Dr Dr Pascale HAMMADI.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  - Quelle est la date de naissance du patient ?\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
+  "confidence": 0.7,
+  "source": {
+    "channel": "email"
+  }
+}

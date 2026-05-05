@@ -1,0 +1,59 @@
+{
+  "patient": {
+    "full_name": "Sylvie ROUSSEAU",
+    "dob": "12/04/1977",
+    "sex": "F",
+    "phone": "06 80 47 99 26",
+    "email": "s.rousseau@hotmail.fr",
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Catherine FONTAINE",
+    "specialty": "Médecine générale",
+    "service": null,
+    "hospital_or_clinic": "CHU Saint-Étienne\nTél secrétariat",
+    "phone": "04 33 11 83 46",
+    "email": "dr.catherine.fontaine@hopital-edouard-herriot.fr"
+  },
+  "exam": {
+    "modality": "IRM",
+    "region": "hépatique",
+    "with_injection": true,
+    "protocol_notes": null,
+    "urgency": "prioritaire"
+  },
+  "clinical_indication": "Caractérisation de lésion hépatique",
+  "required_attachments": [
+    {
+      "name": "ordonnance",
+      "present": true,
+      "notes": null
+    },
+    {
+      "name": "créatinine",
+      "present": true,
+      "notes": null
+    },
+    {
+      "name": "créat",
+      "present": true,
+      "notes": null
+    },
+    {
+      "name": "allergies",
+      "present": true,
+      "notes": null
+    }
+  ],
+  "missing_fields": [],
+  "routing": {
+    "next_action": "await_radiologist_validation",
+    "target_contact": null,
+    "rationale_fr": null
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen IRM (hépatique)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen IRM pour le patient Sylvie ROUSSEAU, adressée par le Dr Dr Catherine FONTAINE.\n\nVotre demande est complète et sera traitée dans les meilleurs délais. Nous vous recontacterons pour confirmer le créneau de rendez-vous.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
+  "confidence": 0.7,
+  "source": {
+    "channel": "email"
+  }
+}

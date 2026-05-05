@@ -1,17 +1,16 @@
 """Demo script: ingest all samples into the database."""
 
-import json
 import logging
 from pathlib import Path
 
-from app.database import init_db, engine
+from sqlmodel import Session
+
+from app.database import engine, init_db
 from app.models.request import MedicalRequestDB, RequestStatus
 from app.services.ack_generator import generate_ack
-from app.services.ingest import ingest_file
 from app.services.extractor import extract_request
+from app.services.ingest import ingest_file
 from app.services.validator import validate_request
-
-from sqlmodel import Session
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

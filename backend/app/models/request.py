@@ -6,8 +6,8 @@ from typing import Optional
 from uuid import uuid4
 
 from pydantic import BaseModel, Field
-from sqlmodel import Column, Field as SQLField, SQLModel, Text
-
+from sqlmodel import Column, SQLModel, Text
+from sqlmodel import Field as SQLField
 
 # ── Enums ─────────────────────────────────────────────────────────────
 

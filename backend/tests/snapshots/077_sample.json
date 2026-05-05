@@ -1,0 +1,50 @@
+{
+  "patient": {
+    "full_name": "Marc NOEL",
+    "dob": "20/08/1994",
+    "sex": "M",
+    "phone": "07 24 46 96 96",
+    "email": "m.noel@hotmail.fr",
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Olivier PERRIN",
+    "specialty": "Gynécologie",
+    "service": null,
+    "hospital_or_clinic": "Clinique Mutualiste\nTél secrétariat",
+    "phone": "04 87 95 49 15",
+    "email": "dr.olivier.perrin@ch-villefranche.fr"
+  },
+  "exam": {
+    "modality": "IRM",
+    "region": null,
+    "with_injection": null,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Toux chronique, bilan pneumologique",
+  "required_attachments": [
+    {
+      "name": "ordonnance",
+      "present": true,
+      "notes": null
+    }
+  ],
+  "missing_fields": [
+    {
+      "field_path": "exam.with_injection",
+      "reason": "Injection non précisée pour cet examen",
+      "suggested_question_fr": "L'examen est-il demandé avec ou sans injection de produit de contraste ?"
+    }
+  ],
+  "routing": {
+    "next_action": "await_radiologist_validation",
+    "target_contact": null,
+    "rationale_fr": null
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen IRM ([Région anatomique])\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen IRM pour le patient Marc NOEL, adressée par le Dr Dr Olivier PERRIN.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  - L'examen est-il demandé avec ou sans injection de produit de contraste ?\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
+  "confidence": 0.7,
+  "source": {
+    "channel": "email"
+  }
+}

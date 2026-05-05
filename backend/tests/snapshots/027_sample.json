@@ -1,0 +1,44 @@
+{
+  "patient": {
+    "full_name": "Hélène MORIN",
+    "dob": null,
+    "sex": "F",
+    "phone": "07 45 15 10 52",
+    "email": null,
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Sylvie RICHARD",
+    "specialty": "Hématologie",
+    "service": null,
+    "hospital_or_clinic": "Hôpital Nord-Ouest\nTél",
+    "phone": "04 36 91 43 30",
+    "email": "dr.sylvie.richard@hopital-croix-rousse.fr"
+  },
+  "exam": {
+    "modality": "IRM",
+    "region": "pelvienne",
+    "with_injection": false,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Douleurs pelviennes chroniques",
+  "required_attachments": [],
+  "missing_fields": [
+    {
+      "field_path": "patient.dob",
+      "reason": "Date de naissance absente",
+      "suggested_question_fr": "Quelle est la date de naissance du patient ?"
+    }
+  ],
+  "routing": {
+    "next_action": "contact_patient",
+    "target_contact": "07 45 15 10 52",
+    "rationale_fr": "Informations du patient incomplètes — le contacter."
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen IRM (pelvienne)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen IRM pour le patient Hélène MORIN, adressée par le Dr Dr Sylvie RICHARD.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  - Quelle est la date de naissance du patient ?\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
+  "confidence": 0.7,
+  "source": {
+    "channel": "email"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "patient": {
+    "full_name": "Émilie GARCIA",
+    "dob": "04/04/1972",
+    "sex": "F",
+    "phone": "06 37 71 45 85",
+    "email": null,
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": null,
+    "specialty": null,
+    "service": null,
+    "hospital_or_clinic": null,
+    "phone": null,
+    "email": null
+  },
+  "exam": {
+    "modality": "radio",
+    "region": null,
+    "with_injection": null,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": null,
+  "required_attachments": [
+    {
+      "name": "ordonnance",
+      "present": true,
+      "notes": null
+    }
+  ],
+  "missing_fields": [
+    {
+      "field_path": "prescriber.phone",
+      "reason": "Aucun contact du prescripteur (téléphone ou email)",
+      "suggested_question_fr": "Pourriez-vous nous fournir un numéro de téléphone ou un email pour joindre le prescripteur ?"
+    },
+    {
+      "field_path": "clinical_indication",
+      "reason": "Indication clinique absente",
+      "suggested_question_fr": "Quelle est l'indication clinique justifiant cet examen ?"
+    }
+  ],
+  "routing": {
+    "next_action": "contact_prescriber",
+    "target_contact": null,
+    "rationale_fr": "Informations du prescripteur manquantes — le contacter en priorité."
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen radio ([Région anatomique])\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen radio pour le patient Émilie GARCIA, adressée par le Dr [Nom du prescripteur].\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  - Pourriez-vous nous fournir un numéro de téléphone ou un email pour joindre le prescripteur ?\n  - Quelle est l'indication clinique justifiant cet examen ?\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
+  "confidence": 0.7,
+  "source": {
+    "channel": "email"
+  }
+}

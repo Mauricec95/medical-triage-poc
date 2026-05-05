@@ -1,0 +1,70 @@
+{
+  "patient": {
+    "full_name": null,
+    "dob": "25/12/1970",
+    "sex": "M",
+    "phone": null,
+    "email": null,
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": null,
+    "specialty": null,
+    "service": null,
+    "hospital_or_clinic": null,
+    "phone": null,
+    "email": null
+  },
+  "exam": {
+    "modality": "scanner",
+    "region": null,
+    "with_injection": null,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": null,
+  "required_attachments": [
+    {
+      "name": "créatinine",
+      "present": false,
+      "notes": null
+    },
+    {
+      "name": "créat",
+      "present": false,
+      "notes": null
+    }
+  ],
+  "missing_fields": [
+    {
+      "field_path": "patient.full_name",
+      "reason": "Nom du patient absent",
+      "suggested_question_fr": "Pourriez-vous nous communiquer le nom complet du patient ?"
+    },
+    {
+      "field_path": "prescriber.phone",
+      "reason": "Aucun contact du prescripteur (téléphone ou email)",
+      "suggested_question_fr": "Pourriez-vous nous fournir un numéro de téléphone ou un email pour joindre le prescripteur ?"
+    },
+    {
+      "field_path": "exam.with_injection",
+      "reason": "Injection non précisée pour cet examen",
+      "suggested_question_fr": "L'examen est-il demandé avec ou sans injection de produit de contraste ?"
+    },
+    {
+      "field_path": "clinical_indication",
+      "reason": "Indication clinique absente",
+      "suggested_question_fr": "Quelle est l'indication clinique justifiant cet examen ?"
+    }
+  ],
+  "routing": {
+    "next_action": "contact_prescriber",
+    "target_contact": null,
+    "rationale_fr": "Informations du prescripteur manquantes — le contacter en priorité."
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen scanner ([Région anatomique])\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen scanner pour le patient [Nom du patient], adressée par le Dr [Nom du prescripteur].\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  - Pourriez-vous nous communiquer le nom complet du patient ?\n  - Pourriez-vous nous fournir un numéro de téléphone ou un email pour joindre le prescripteur ?\n  - L'examen est-il demandé avec ou sans injection de produit de contraste ?\n  - Quelle est l'indication clinique justifiant cet examen ?\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
+  "confidence": 0.7,
+  "source": {
+    "channel": "email"
+  }
+}

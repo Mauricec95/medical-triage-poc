@@ -1,0 +1,44 @@
+{
+  "patient": {
+    "full_name": "Aïcha MARTINEZ",
+    "dob": "24/03/1997",
+    "sex": "F",
+    "phone": "06 45 66 19 46",
+    "email": "dr.sylvie.girard@hopital-edouard-herriot.fr",
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Sylvie GIRARD",
+    "specialty": "Chirurgie vasculaire",
+    "service": null,
+    "hospital_or_clinic": "CHU Grenoble\nTél",
+    "phone": "04 50 44 52 50",
+    "email": "dr.sylvie.girard@hopital-edouard-herriot.fr"
+  },
+  "exam": {
+    "modality": "IRM",
+    "region": "pelvienne",
+    "with_injection": null,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Douleurs pelviennes chroniques",
+  "required_attachments": [],
+  "missing_fields": [
+    {
+      "field_path": "exam.with_injection",
+      "reason": "Injection non précisée pour cet examen",
+      "suggested_question_fr": "L'examen est-il demandé avec ou sans injection de produit de contraste ?"
+    }
+  ],
+  "routing": {
+    "next_action": "await_radiologist_validation",
+    "target_contact": null,
+    "rationale_fr": null
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen IRM (pelvienne)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen IRM pour le patient Aïcha MARTINEZ, adressée par le Dr Dr Sylvie GIRARD.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  - L'examen est-il demandé avec ou sans injection de produit de contraste ?\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
+  "confidence": 0.7,
+  "source": {
+    "channel": "email"
+  }
+}

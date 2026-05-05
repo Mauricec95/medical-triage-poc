@@ -1,0 +1,44 @@
+{
+  "patient": {
+    "full_name": "Jacques LEMAIRE",
+    "dob": null,
+    "sex": "M",
+    "phone": "06 47 55 57 65",
+    "email": null,
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Sylvie HAMMADI",
+    "specialty": "Chirurgie vasculaire",
+    "service": null,
+    "hospital_or_clinic": "Clinique du Parc\nTél",
+    "phone": "04 38 41 77 62",
+    "email": "dr.sylvie.hammadi@chu-st-etienne.fr"
+  },
+  "exam": {
+    "modality": "IRM",
+    "region": "cardiaque",
+    "with_injection": true,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Bilan de cardiomyopathie",
+  "required_attachments": [],
+  "missing_fields": [
+    {
+      "field_path": "patient.dob",
+      "reason": "Date de naissance absente",
+      "suggested_question_fr": "Quelle est la date de naissance du patient ?"
+    }
+  ],
+  "routing": {
+    "next_action": "contact_patient",
+    "target_contact": "06 47 55 57 65",
+    "rationale_fr": "Informations du patient incomplètes — le contacter."
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen IRM (cardiaque)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen IRM pour le patient Jacques LEMAIRE, adressée par le Dr Dr Sylvie HAMMADI.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  - Quelle est la date de naissance du patient ?\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
+  "confidence": 0.7,
+  "source": {
+    "channel": "email"
+  }
+}

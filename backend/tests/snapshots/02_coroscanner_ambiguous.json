@@ -1,0 +1,54 @@
+{
+  "patient": {
+    "full_name": "Pierre DUBOIS",
+    "dob": "03/09/1955",
+    "sex": "M",
+    "phone": "06 98 76 54 32",
+    "email": null,
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Lefèvre",
+    "specialty": "Cardiologie",
+    "service": null,
+    "hospital_or_clinic": "Hôpital de la Croix-Rousse",
+    "phone": null,
+    "email": null
+  },
+  "exam": {
+    "modality": "scanner",
+    "region": null,
+    "with_injection": null,
+    "protocol_notes": null,
+    "urgency": "prioritaire"
+  },
+  "clinical_indication": null,
+  "required_attachments": [],
+  "missing_fields": [
+    {
+      "field_path": "prescriber.phone",
+      "reason": "Aucun contact du prescripteur (téléphone ou email)",
+      "suggested_question_fr": "Pourriez-vous nous fournir un numéro de téléphone ou un email pour joindre le prescripteur ?"
+    },
+    {
+      "field_path": "exam.with_injection",
+      "reason": "Injection non précisée pour cet examen",
+      "suggested_question_fr": "L'examen est-il demandé avec ou sans injection de produit de contraste ?"
+    },
+    {
+      "field_path": "clinical_indication",
+      "reason": "Indication clinique absente",
+      "suggested_question_fr": "Quelle est l'indication clinique justifiant cet examen ?"
+    }
+  ],
+  "routing": {
+    "next_action": "contact_prescriber",
+    "target_contact": null,
+    "rationale_fr": "Informations du prescripteur manquantes — le contacter en priorité."
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen scanner ([Région anatomique])\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen scanner pour le patient Pierre DUBOIS, adressée par le Dr Dr Lefèvre.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  - Pourriez-vous nous fournir un numéro de téléphone ou un email pour joindre le prescripteur ?\n  - L'examen est-il demandé avec ou sans injection de produit de contraste ?\n  - Quelle est l'indication clinique justifiant cet examen ?\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
+  "confidence": 0.7,
+  "source": {
+    "channel": "email"
+  }
+}

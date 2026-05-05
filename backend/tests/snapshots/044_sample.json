@@ -1,0 +1,50 @@
+{
+  "patient": {
+    "full_name": "Marie DUMONT",
+    "dob": "14/02/2002",
+    "sex": "F",
+    "phone": "07 88 78 71 69",
+    "email": "m.dumont@laposte.net",
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Sandrine DELACROIX",
+    "specialty": "Chirurgie vasculaire",
+    "service": null,
+    "hospital_or_clinic": "Hôpital de jour",
+    "phone": "04 95 44 51 41",
+    "email": "dr.sandrine.delacroix@hopital-croix-rousse.fr"
+  },
+  "exam": {
+    "modality": "IRM",
+    "region": "pelvienne",
+    "with_injection": null,
+    "protocol_notes": null,
+    "urgency": "prioritaire"
+  },
+  "clinical_indication": "Métrorragies post-ménopausiques",
+  "required_attachments": [
+    {
+      "name": "ordonnance",
+      "present": true,
+      "notes": null
+    }
+  ],
+  "missing_fields": [
+    {
+      "field_path": "exam.with_injection",
+      "reason": "Injection non précisée pour cet examen",
+      "suggested_question_fr": "L'examen est-il demandé avec ou sans injection de produit de contraste ?"
+    }
+  ],
+  "routing": {
+    "next_action": "await_radiologist_validation",
+    "target_contact": null,
+    "rationale_fr": null
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen IRM (pelvienne)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen IRM pour le patient Marie DUMONT, adressée par le Dr Dr Sandrine DELACROIX.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  - L'examen est-il demandé avec ou sans injection de produit de contraste ?\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
+  "confidence": 0.7,
+  "source": {
+    "channel": "email"
+  }
+}

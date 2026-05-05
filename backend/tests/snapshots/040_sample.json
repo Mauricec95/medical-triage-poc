@@ -1,0 +1,44 @@
+{
+  "patient": {
+    "full_name": "Mamadou MARIE",
+    "dob": "06/08/1957",
+    "sex": "M",
+    "phone": "07 63 42 20 70",
+    "email": null,
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Pierre RICHARD",
+    "specialty": "Chirurgie digestive",
+    "service": null,
+    "hospital_or_clinic": "Centre Hospitalier de Villefranche",
+    "phone": null,
+    "email": "dr.pierre.richard@clinique-mutualiste.fr"
+  },
+  "exam": {
+    "modality": "IRM",
+    "region": "genou gauche",
+    "with_injection": false,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": null,
+  "required_attachments": [],
+  "missing_fields": [
+    {
+      "field_path": "clinical_indication",
+      "reason": "Indication clinique absente",
+      "suggested_question_fr": "Quelle est l'indication clinique justifiant cet examen ?"
+    }
+  ],
+  "routing": {
+    "next_action": "await_radiologist_validation",
+    "target_contact": null,
+    "rationale_fr": null
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen IRM (genou gauche)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen IRM pour le patient Mamadou MARIE, adressée par le Dr Dr Pierre RICHARD.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  - Quelle est l'indication clinique justifiant cet examen ?\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
+  "confidence": 0.7,
+  "source": {
+    "channel": "email"
+  }
+}

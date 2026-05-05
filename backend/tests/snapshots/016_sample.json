@@ -1,0 +1,44 @@
+{
+  "patient": {
+    "full_name": "Emma FAURE",
+    "dob": "16/09/1957",
+    "sex": "F",
+    "phone": "07 58 86 69 77",
+    "email": "dr.jeanmarc.picard@hopital-croix-rousse.fr",
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Jean-",
+    "specialty": "Cardiologie",
+    "service": null,
+    "hospital_or_clinic": "Hôpital Édouard Herriot\nTél",
+    "phone": "04 52 80 11 97",
+    "email": "dr.jeanmarc.picard@hopital-croix-rousse.fr"
+  },
+  "exam": {
+    "modality": "IRM",
+    "region": "cardiaque",
+    "with_injection": true,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Bilan de cardiomyopathie",
+  "required_attachments": [
+    {
+      "name": "ordonnance",
+      "present": true,
+      "notes": null
+    }
+  ],
+  "missing_fields": [],
+  "routing": {
+    "next_action": "await_radiologist_validation",
+    "target_contact": null,
+    "rationale_fr": null
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen IRM (cardiaque)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen IRM pour le patient Emma FAURE, adressée par le Dr Dr Jean-.\n\nVotre demande est complète et sera traitée dans les meilleurs délais. Nous vous recontacterons pour confirmer le créneau de rendez-vous.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
+  "confidence": 0.7,
+  "source": {
+    "channel": "email"
+  }
+}

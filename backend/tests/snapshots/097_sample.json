@@ -1,0 +1,50 @@
+{
+  "patient": {
+    "full_name": "Camille MEYER",
+    "dob": "23/03/1994",
+    "sex": "F",
+    "phone": "06 95 91 61 56",
+    "email": "dr.olivier.mercier@chu-lyon.fr",
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Olivier MERCIER",
+    "specialty": "Chirurgie vasculaire",
+    "service": null,
+    "hospital_or_clinic": "Hôpital de la Croix-Rousse\nTél",
+    "phone": "04 85 96 30 13",
+    "email": "dr.olivier.mercier@chu-lyon.fr"
+  },
+  "exam": {
+    "modality": "scanner",
+    "region": "membres inférieurs",
+    "with_injection": true,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Suspicion de thrombose veineuse profonde",
+  "required_attachments": [
+    {
+      "name": "ordonnance",
+      "present": true,
+      "notes": null
+    }
+  ],
+  "missing_fields": [
+    {
+      "field_path": "required_attachments.creatinine",
+      "reason": "Scanner avec injection : résultat de créatinine requis",
+      "suggested_question_fr": "Un scanner avec injection est demandé. Pourriez-vous fournir le résultat de créatinine récent du patient ?"
+    }
+  ],
+  "routing": {
+    "next_action": "await_radiologist_validation",
+    "target_contact": null,
+    "rationale_fr": null
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen scanner (membres inférieurs)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen scanner pour le patient Camille MEYER, adressée par le Dr Dr Olivier MERCIER.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  - Un scanner avec injection est demandé. Pourriez-vous fournir le résultat de créatinine récent du patient ?\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
+  "confidence": 0.7,
+  "source": {
+    "channel": "email"
+  }
+}

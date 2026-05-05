@@ -1,0 +1,60 @@
+{
+  "patient": {
+    "full_name": "Manon BERTRAND\nN",
+    "dob": "21/02/2007",
+    "sex": "F",
+    "phone": null,
+    "email": null,
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Delphine PERRIN",
+    "specialty": "Hématologie",
+    "service": null,
+    "hospital_or_clinic": "Clinique Montchat\n\nDEMANDE D",
+    "phone": "04 47 53 72 34",
+    "email": null
+  },
+  "exam": {
+    "modality": "scanner",
+    "region": "abdomino-pelvien",
+    "with_injection": true,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Douleurs abdominales chroniques, amaigrissement",
+  "required_attachments": [
+    {
+      "name": "créatinine",
+      "present": false,
+      "notes": null
+    },
+    {
+      "name": "créat",
+      "present": false,
+      "notes": null
+    },
+    {
+      "name": "allergies",
+      "present": false,
+      "notes": null
+    }
+  ],
+  "missing_fields": [
+    {
+      "field_path": "required_attachments.creatinine",
+      "reason": "Scanner avec injection : résultat de créatinine requis",
+      "suggested_question_fr": "Un scanner avec injection est demandé. Pourriez-vous fournir le résultat de créatinine récent du patient ?"
+    }
+  ],
+  "routing": {
+    "next_action": "await_radiologist_validation",
+    "target_contact": null,
+    "rationale_fr": null
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen scanner (abdomino-pelvien)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen scanner pour le patient Manon BERTRAND\nN, adressée par le Dr Dr Delphine PERRIN.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  - Un scanner avec injection est demandé. Pourriez-vous fournir le résultat de créatinine récent du patient ?\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
+  "confidence": 0.7,
+  "source": {
+    "channel": "email"
+  }
+}

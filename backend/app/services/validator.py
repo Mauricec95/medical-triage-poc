@@ -68,7 +68,10 @@ def validate_request(request: MedicalRequest) -> MedicalRequest:
         missing.append(MissingField(
             field_path="exam.with_injection",
             reason="Injection non précisée pour cet examen",
-            suggested_question_fr="L'examen est-il demandé avec ou sans injection de produit de contraste ?",
+            suggested_question_fr=(
+                "L'examen est-il demandé avec ou sans injection "
+                "de produit de contraste ?"
+            ),
         ))
 
     # Rule: clinical indication should be present

@@ -1,0 +1,44 @@
+{
+  "patient": {
+    "full_name": "Catherine MARCHAND",
+    "dob": null,
+    "sex": "F",
+    "phone": "07 41 26 82 36",
+    "email": null,
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Sylvie LECLERC",
+    "specialty": "Chirurgie vasculaire",
+    "service": null,
+    "hospital_or_clinic": "Clinique Saint-Joseph\nTél",
+    "phone": "04 28 80 36 85",
+    "email": "dr.sylvie.leclerc@chu-lyon.fr"
+  },
+  "exam": {
+    "modality": "IRM",
+    "region": "genou gauche",
+    "with_injection": false,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Douleur méniscale chronique",
+  "required_attachments": [],
+  "missing_fields": [
+    {
+      "field_path": "patient.dob",
+      "reason": "Date de naissance absente",
+      "suggested_question_fr": "Quelle est la date de naissance du patient ?"
+    }
+  ],
+  "routing": {
+    "next_action": "contact_patient",
+    "target_contact": "07 41 26 82 36",
+    "rationale_fr": "Informations du patient incomplètes — le contacter."
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen IRM (genou gauche)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen IRM pour le patient Catherine MARCHAND, adressée par le Dr Dr Sylvie LECLERC.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  - Quelle est la date de naissance du patient ?\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
+  "confidence": 0.7,
+  "source": {
+    "channel": "email"
+  }
+}

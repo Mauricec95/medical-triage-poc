@@ -1,0 +1,44 @@
+{
+  "patient": {
+    "full_name": "Amina LAURENT",
+    "dob": null,
+    "sex": "F",
+    "phone": "07 76 59 81 25",
+    "email": null,
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Sandrine BOYER",
+    "specialty": "Dermatologie",
+    "service": null,
+    "hospital_or_clinic": "CHU Grenoble\nTél",
+    "phone": "04 53 43 67 37",
+    "email": "dr.sandrine.boyer@clinique-sj.fr"
+  },
+  "exam": {
+    "modality": "IRM",
+    "region": "épaule gauche",
+    "with_injection": true,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Instabilité récidivante de l'épaule",
+  "required_attachments": [],
+  "missing_fields": [
+    {
+      "field_path": "patient.dob",
+      "reason": "Date de naissance absente",
+      "suggested_question_fr": "Quelle est la date de naissance du patient ?"
+    }
+  ],
+  "routing": {
+    "next_action": "contact_patient",
+    "target_contact": "07 76 59 81 25",
+    "rationale_fr": "Informations du patient incomplètes — le contacter."
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen IRM (épaule gauche)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen IRM pour le patient Amina LAURENT, adressée par le Dr Dr Sandrine BOYER.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  - Quelle est la date de naissance du patient ?\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
+  "confidence": 0.7,
+  "source": {
+    "channel": "email"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "patient": {
+    "full_name": "Jade MARCHAND",
+    "dob": "19/02/1965",
+    "sex": "F",
+    "phone": "06 54 78 64 94",
+    "email": "dr.julien.leclerc@hopital-croix-rousse.fr",
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Julien LECLERC",
+    "specialty": "Gériatrie",
+    "service": null,
+    "hospital_or_clinic": "Hôpital Femme Mère Enfant\nTél",
+    "phone": "04 67 18 74 92",
+    "email": "dr.julien.leclerc@hopital-croix-rousse.fr"
+  },
+  "exam": {
+    "modality": "IRM",
+    "region": "poignet",
+    "with_injection": null,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Douleur chronique du poignet, suspicion TFCC",
+  "required_attachments": [],
+  "missing_fields": [
+    {
+      "field_path": "exam.with_injection",
+      "reason": "Injection non précisée pour cet examen",
+      "suggested_question_fr": "L'examen est-il demandé avec ou sans injection de produit de contraste ?"
+    }
+  ],
+  "routing": {
+    "next_action": "await_radiologist_validation",
+    "target_contact": null,
+    "rationale_fr": null
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen IRM (poignet)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen IRM pour le patient Jade MARCHAND, adressée par le Dr Dr Julien LECLERC.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  - L'examen est-il demandé avec ou sans injection de produit de contraste ?\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
+  "confidence": 0.7,
+  "source": {
+    "channel": "email"
+  }
+}
