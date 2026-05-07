@@ -43,12 +43,12 @@
     }
   ],
   "routing": {
-    "next_action": "await_radiologist_validation",
-    "target_contact": null,
-    "rationale_fr": null
+    "next_action": "contact_prescriber",
+    "target_contact": "dr.catherine.lefevre@clinique-mutualiste.fr",
+    "rationale_fr": "Informations cliniques ou pièces jointes manquantes — contacter le prescripteur."
   },
-  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen IRM (rachis cervical)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen IRM pour le patient Marie MEUNIER, adressée par le Dr Dr Catherine LEFÈVRE.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  - L'examen est-il demandé avec ou sans injection de produit de contraste ?\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
-  "confidence": 0.7,
+  "ack_message_fr": "Objet : Accusé de réception — Demande IRM rachis cervical pour Marie MEUNIER\n\nCher Dr Catherine LEFÈVRE,\n\nNous accusons bonne réception de votre demande d'examen (IRM rachis cervical) pour le patient Marie MEUNIER, adressée par Dr Catherine LEFÈVRE.\n\nNous avons noté le caractère URGENT de cette demande et la traiterons en priorité.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  1. L'examen est-il demandé avec ou sans injection de produit de contraste ?\n\nNous vous serions reconnaissants de bien vouloir nous transmettre ces informations par retour de courrier ou par téléphone.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
+  "confidence": 0.9,
   "source": {
     "channel": "email"
   }

@@ -32,12 +32,12 @@
   ],
   "missing_fields": [],
   "routing": {
-    "next_action": "await_radiologist_validation",
-    "target_contact": null,
-    "rationale_fr": null
+    "next_action": "schedule",
+    "target_contact": "06 46 55 16 93",
+    "rationale_fr": "Demande complète — à programmer."
   },
-  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen IRM (pelvienne)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen IRM pour le patient Claude RICHARD, adressée par le Dr Dr Christophe LECLERC.\n\nVotre demande est complète et sera traitée dans les meilleurs délais. Nous vous recontacterons pour confirmer le créneau de rendez-vous.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
-  "confidence": 0.7,
+  "ack_message_fr": "Objet : Accusé de réception — Demande IRM pelvienne sans injection pour Claude RICHARD\n\nCher Dr Christophe LECLERC,\n\nNous accusons bonne réception de votre demande d'examen (IRM pelvienne sans injection) pour le patient Claude RICHARD, adressée par Dr Christophe LECLERC.\n\nVotre demande est complète et sera traitée dans les meilleurs délais. Nous vous recontacterons pour confirmer le créneau de rendez-vous.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
+  "confidence": 0.95,
   "source": {
     "channel": "email"
   }

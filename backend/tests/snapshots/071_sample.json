@@ -36,17 +36,27 @@
       "suggested_question_fr": "Quelle est la date de naissance du patient ?"
     },
     {
+      "field_path": "patient.contact",
+      "reason": "Aucun moyen de contacter le patient",
+      "suggested_question_fr": "Pourriez-vous nous fournir un numéro de téléphone ou une adresse email pour joindre le patient ?"
+    },
+    {
       "field_path": "clinical_indication",
       "reason": "Indication clinique absente",
       "suggested_question_fr": "Quelle est l'indication clinique justifiant cet examen ?"
+    },
+    {
+      "field_path": "required_attachments.ordonnance",
+      "reason": "Ordonnance non jointe ou non identifiée",
+      "suggested_question_fr": "Pourriez-vous joindre l'ordonnance du médecin prescripteur ?"
     }
   ],
   "routing": {
-    "next_action": "contact_patient",
-    "target_contact": null,
-    "rationale_fr": "Informations du patient incomplètes — le contacter."
+    "next_action": "contact_prescriber",
+    "target_contact": "dr.sophie.morel@hopital-edouard-herriot.fr",
+    "rationale_fr": "Informations cliniques ou pièces jointes manquantes — contacter le prescripteur."
   },
-  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen echo (pelvienne)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen echo pour le patient [Nom du patient], adressée par le Dr Dr Sophie MOREL.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  - Pourriez-vous nous communiquer le nom complet du patient ?\n  - Quelle est la date de naissance du patient ?\n  - Quelle est l'indication clinique justifiant cet examen ?\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
+  "ack_message_fr": "Objet : Accusé de réception — Demande echo pelvienne pour [Nom du patient]\n\nCher Dr Sophie MOREL,\n\nNous accusons bonne réception de votre demande d'examen (echo pelvienne) pour le patient [Nom du patient], adressée par Dr Sophie MOREL.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  1. Pourriez-vous nous communiquer le nom complet du patient ?\n  2. Quelle est la date de naissance du patient ?\n  3. Pourriez-vous nous fournir un numéro de téléphone ou une adresse email pour joindre le patient ?\n  4. Quelle est l'indication clinique justifiant cet examen ?\n  5. Pourriez-vous joindre l'ordonnance du médecin prescripteur ?\n\nNous vous serions reconnaissants de bien vouloir nous transmettre ces informations par retour de courrier ou par téléphone.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
   "confidence": 0.7,
   "source": {
     "channel": "email"

@@ -37,12 +37,12 @@
   ],
   "missing_fields": [],
   "routing": {
-    "next_action": "await_radiologist_validation",
-    "target_contact": null,
-    "rationale_fr": null
+    "next_action": "schedule",
+    "target_contact": "07 54 49 39 38",
+    "rationale_fr": "Demande complète — à programmer."
   },
-  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen IRM (épaule droite)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen IRM pour le patient Valérie GARNIER, adressée par le Dr Dr Christophe MARECHAL.\n\nVotre demande est complète et sera traitée dans les meilleurs délais. Nous vous recontacterons pour confirmer le créneau de rendez-vous.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
-  "confidence": 0.7,
+  "ack_message_fr": "Objet : Accusé de réception — Demande IRM épaule droite sans injection pour Valérie GARNIER\n\nCher Dr Christophe MARECHAL,\n\nNous accusons bonne réception de votre demande d'examen (IRM épaule droite sans injection) pour le patient Valérie GARNIER, adressée par Dr Christophe MARECHAL.\n\nVotre demande est complète et sera traitée dans les meilleurs délais. Nous vous recontacterons pour confirmer le créneau de rendez-vous.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
+  "confidence": 0.95,
   "source": {
     "channel": "email"
   }

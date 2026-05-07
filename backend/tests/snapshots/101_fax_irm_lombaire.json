@@ -47,8 +47,8 @@
     "target_contact": "06 44 55 66 77",
     "rationale_fr": "Informations du patient incomplètes — le contacter."
   },
-  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen IRM (rachis lombaire)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen IRM pour le patient Sylvie ROUSSEAU\nN, adressée par le Dr Dr Marc LEBLANC.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  - Quelle est la date de naissance du patient ?\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
-  "confidence": 0.7,
+  "ack_message_fr": "Objet : Accusé de réception — Demande IRM rachis lombaire sans injection pour Sylvie ROUSSEAU\nN\n\nCher Dr Marc LEBLANC,\n\nNous accusons bonne réception de votre demande d'examen (IRM rachis lombaire sans injection) pour le patient Sylvie ROUSSEAU\nN, adressée par Dr Marc LEBLANC.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  1. Quelle est la date de naissance du patient ?\n\nNous vous serions reconnaissants de bien vouloir nous transmettre ces informations par retour de courrier ou par téléphone.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
+  "confidence": 0.85,
   "source": {
     "channel": "fax"
   }

@@ -32,18 +32,23 @@
   ],
   "missing_fields": [
     {
+      "field_path": "exam.region",
+      "reason": "Région anatomique non précisée",
+      "suggested_question_fr": "Quelle région anatomique doit être examinée ?"
+    },
+    {
       "field_path": "exam.with_injection",
       "reason": "Injection non précisée pour cet examen",
       "suggested_question_fr": "L'examen est-il demandé avec ou sans injection de produit de contraste ?"
     }
   ],
   "routing": {
-    "next_action": "await_radiologist_validation",
-    "target_contact": null,
-    "rationale_fr": null
+    "next_action": "contact_prescriber",
+    "target_contact": "dr.emilie.simon@hopital-edouard-herriot.fr",
+    "rationale_fr": "Informations cliniques ou pièces jointes manquantes — contacter le prescripteur."
   },
-  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen IRM ([Région anatomique])\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen IRM pour le patient Thierry KONÉ, adressée par le Dr Dr Émilie SIMON.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  - L'examen est-il demandé avec ou sans injection de produit de contraste ?\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
-  "confidence": 0.7,
+  "ack_message_fr": "Objet : Accusé de réception — Demande IRM pour Thierry KONÉ\n\nCher Dr Émilie SIMON,\n\nNous accusons bonne réception de votre demande d'examen (IRM) pour le patient Thierry KONÉ, adressée par Dr Émilie SIMON.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  1. Quelle région anatomique doit être examinée ?\n  2. L'examen est-il demandé avec ou sans injection de produit de contraste ?\n\nNous vous serions reconnaissants de bien vouloir nous transmettre ces informations par retour de courrier ou par téléphone.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
+  "confidence": 0.8,
   "source": {
     "channel": "email"
   }

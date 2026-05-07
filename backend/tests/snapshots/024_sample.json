@@ -26,7 +26,12 @@
   "required_attachments": [],
   "missing_fields": [
     {
-      "field_path": "prescriber.phone",
+      "field_path": "prescriber.full_name",
+      "reason": "Nom du prescripteur non identifié",
+      "suggested_question_fr": "Quel est le nom du médecin prescripteur ?"
+    },
+    {
+      "field_path": "prescriber.contact",
       "reason": "Aucun contact du prescripteur (téléphone ou email)",
       "suggested_question_fr": "Pourriez-vous nous fournir un numéro de téléphone ou un email pour joindre le prescripteur ?"
     },
@@ -34,14 +39,19 @@
       "field_path": "exam.with_injection",
       "reason": "Injection non précisée pour cet examen",
       "suggested_question_fr": "L'examen est-il demandé avec ou sans injection de produit de contraste ?"
+    },
+    {
+      "field_path": "required_attachments.ordonnance",
+      "reason": "Ordonnance non jointe ou non identifiée",
+      "suggested_question_fr": "Pourriez-vous joindre l'ordonnance du médecin prescripteur ?"
     }
   ],
   "routing": {
     "next_action": "contact_prescriber",
     "target_contact": null,
-    "rationale_fr": "Informations du prescripteur manquantes — le contacter en priorité."
+    "rationale_fr": "Informations du prescripteur et cliniques manquantes — contacter le prescripteur."
   },
-  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen scanner (rachis lombaire)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen scanner pour le patient Samir BLANCHARD, adressée par le Dr [Nom du prescripteur].\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  - Pourriez-vous nous fournir un numéro de téléphone ou un email pour joindre le prescripteur ?\n  - L'examen est-il demandé avec ou sans injection de produit de contraste ?\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
+  "ack_message_fr": "Objet : Accusé de réception — Demande scanner rachis lombaire pour Samir BLANCHARD\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen (scanner rachis lombaire) pour le patient Samir BLANCHARD, adressée par [Nom du prescripteur].\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  1. Quel est le nom du médecin prescripteur ?\n  2. Pourriez-vous nous fournir un numéro de téléphone ou un email pour joindre le prescripteur ?\n  3. L'examen est-il demandé avec ou sans injection de produit de contraste ?\n  4. Pourriez-vous joindre l'ordonnance du médecin prescripteur ?\n\nNous vous serions reconnaissants de bien vouloir nous transmettre ces informations par retour de courrier ou par téléphone.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
   "confidence": 0.7,
   "source": {
     "channel": "email"

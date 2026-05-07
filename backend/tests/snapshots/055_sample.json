@@ -48,11 +48,11 @@
   "missing_fields": [],
   "routing": {
     "next_action": "await_radiologist_validation",
-    "target_contact": null,
-    "rationale_fr": null
+    "target_contact": "dr.emilie.fontaine@hopital-edouard-herriot.fr",
+    "rationale_fr": "Demande urgente complète — soumise au radiologue pour validation."
   },
-  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen scanner (membres inférieurs)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen scanner pour le patient Catherine MULLER, adressée par le Dr Dr Émilie FONTAINE.\n\nVotre demande est complète et sera traitée dans les meilleurs délais. Nous vous recontacterons pour confirmer le créneau de rendez-vous.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
-  "confidence": 0.7,
+  "ack_message_fr": "Objet : Accusé de réception — Demande scanner membres inférieurs avec injection pour Catherine MULLER\n\nCher Dr Émilie FONTAINE,\n\nNous accusons bonne réception de votre demande d'examen (scanner membres inférieurs avec injection) pour le patient Catherine MULLER, adressée par Dr Émilie FONTAINE.\n\nNous avons noté le caractère URGENT de cette demande et la traiterons en priorité.\n\nVotre demande est complète et sera traitée dans les meilleurs délais. Nous vous recontacterons pour confirmer le créneau de rendez-vous.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
+  "confidence": 0.95,
   "source": {
     "channel": "email"
   }

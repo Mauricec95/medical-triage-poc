@@ -33,17 +33,17 @@
   "missing_fields": [
     {
       "field_path": "required_attachments.creatinine",
-      "reason": "Scanner avec injection : résultat de créatinine requis",
-      "suggested_question_fr": "Un scanner avec injection est demandé. Pourriez-vous fournir le résultat de créatinine récent du patient ?"
+      "reason": "scanner avec injection : résultat de créatinine requis",
+      "suggested_question_fr": "Un examen avec injection est demandé. Pourriez-vous fournir le résultat de créatinine récent du patient ?"
     }
   ],
   "routing": {
-    "next_action": "await_radiologist_validation",
-    "target_contact": null,
-    "rationale_fr": null
+    "next_action": "contact_prescriber",
+    "target_contact": "dr.pascale.renard@chu-lyon.fr",
+    "rationale_fr": "Informations cliniques ou pièces jointes manquantes — contacter le prescripteur."
   },
-  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen scanner (membres inférieurs)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen scanner pour le patient Khadija MATHIEU, adressée par le Dr Dr Pascale RENARD.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  - Un scanner avec injection est demandé. Pourriez-vous fournir le résultat de créatinine récent du patient ?\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
-  "confidence": 0.7,
+  "ack_message_fr": "Objet : Accusé de réception — Demande scanner membres inférieurs avec injection pour Khadija MATHIEU\n\nCher Dr Pascale RENARD,\n\nNous accusons bonne réception de votre demande d'examen (scanner membres inférieurs avec injection) pour le patient Khadija MATHIEU, adressée par Dr Pascale RENARD.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  1. Un examen avec injection est demandé. Pourriez-vous fournir le résultat de créatinine récent du patient ?\n\nNous vous serions reconnaissants de bien vouloir nous transmettre ces informations par retour de courrier ou par téléphone.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
+  "confidence": 0.9,
   "source": {
     "channel": "email"
   }

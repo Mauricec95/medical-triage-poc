@@ -32,12 +32,12 @@
   ],
   "missing_fields": [],
   "routing": {
-    "next_action": "await_radiologist_validation",
-    "target_contact": null,
-    "rationale_fr": null
+    "next_action": "schedule",
+    "target_contact": "dr.david.mercier@chu-lyon.fr",
+    "rationale_fr": "Demande complète — à programmer."
   },
-  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen IRM (rachis cervical)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen IRM pour le patient Mourad LEFEVRE, adressée par le Dr Dr David MERCIER.\n\nVotre demande est complète et sera traitée dans les meilleurs délais. Nous vous recontacterons pour confirmer le créneau de rendez-vous.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
-  "confidence": 0.7,
+  "ack_message_fr": "Objet : Accusé de réception — Demande IRM rachis cervical sans injection pour Mourad LEFEVRE\n\nCher Dr David MERCIER,\n\nNous accusons bonne réception de votre demande d'examen (IRM rachis cervical sans injection) pour le patient Mourad LEFEVRE, adressée par Dr David MERCIER.\n\nVotre demande est complète et sera traitée dans les meilleurs délais. Nous vous recontacterons pour confirmer le créneau de rendez-vous.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
+  "confidence": 0.95,
   "source": {
     "channel": "email"
   }

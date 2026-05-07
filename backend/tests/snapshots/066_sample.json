@@ -40,14 +40,20 @@
       "notes": null
     }
   ],
-  "missing_fields": [],
+  "missing_fields": [
+    {
+      "field_path": "exam.region",
+      "reason": "Région anatomique non précisée",
+      "suggested_question_fr": "Quelle région anatomique doit être examinée ?"
+    }
+  ],
   "routing": {
-    "next_action": "await_radiologist_validation",
-    "target_contact": null,
-    "rationale_fr": null
+    "next_action": "contact_prescriber",
+    "target_contact": "dr.valerie.berger@chu-grenoble.fr",
+    "rationale_fr": "Informations cliniques ou pièces jointes manquantes — contacter le prescripteur."
   },
-  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen IRM ([Région anatomique])\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen IRM pour le patient Jade MATHIEU, adressée par le Dr Dr Valérie BERGER.\n\nVotre demande est complète et sera traitée dans les meilleurs délais. Nous vous recontacterons pour confirmer le créneau de rendez-vous.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
-  "confidence": 0.7,
+  "ack_message_fr": "Objet : Accusé de réception — Demande IRM avec injection pour Jade MATHIEU\n\nCher Dr Valérie BERGER,\n\nNous accusons bonne réception de votre demande d'examen (IRM avec injection) pour le patient Jade MATHIEU, adressée par Dr Valérie BERGER.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  1. Quelle région anatomique doit être examinée ?\n\nNous vous serions reconnaissants de bien vouloir nous transmettre ces informations par retour de courrier ou par téléphone.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
+  "confidence": 0.9,
   "source": {
     "channel": "email"
   }

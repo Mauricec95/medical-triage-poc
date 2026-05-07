@@ -30,14 +30,20 @@
       "notes": null
     }
   ],
-  "missing_fields": [],
+  "missing_fields": [
+    {
+      "field_path": "required_attachments.creatinine",
+      "reason": "IRM avec injection : résultat de créatinine requis",
+      "suggested_question_fr": "Un examen avec injection est demandé. Pourriez-vous fournir le résultat de créatinine récent du patient ?"
+    }
+  ],
   "routing": {
-    "next_action": "await_radiologist_validation",
-    "target_contact": null,
-    "rationale_fr": null
+    "next_action": "contact_prescriber",
+    "target_contact": "dr.emilie.richard@hopital-croix-rousse.fr",
+    "rationale_fr": "Informations cliniques ou pièces jointes manquantes — contacter le prescripteur."
   },
-  "ack_message_fr": "Objet : Accusé de réception — Demande d'examen IRM (épaule gauche)\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen IRM pour le patient David DIALLO, adressée par le Dr Dr Émilie RICHARD.\n\nVotre demande est complète et sera traitée dans les meilleurs délais. Nous vous recontacterons pour confirmer le créneau de rendez-vous.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n[Nom du secrétariat]\n[Service de radiologie]\n[Coordonnées]",
-  "confidence": 0.7,
+  "ack_message_fr": "Objet : Accusé de réception — Demande IRM épaule gauche avec injection pour David DIALLO\n\nCher Dr Émilie RICHARD,\n\nNous accusons bonne réception de votre demande d'examen (IRM épaule gauche avec injection) pour le patient David DIALLO, adressée par Dr Émilie RICHARD.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  1. Un examen avec injection est demandé. Pourriez-vous fournir le résultat de créatinine récent du patient ?\n\nNous vous serions reconnaissants de bien vouloir nous transmettre ces informations par retour de courrier ou par téléphone.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
+  "confidence": 0.9,
   "source": {
     "channel": "email"
   }
