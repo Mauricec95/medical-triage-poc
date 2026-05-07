@@ -2,7 +2,7 @@
 
 import json
 import logging
-from datetime import datetime
+from datetime import UTC, datetime
 from pathlib import Path
 from tempfile import NamedTemporaryFile
 
@@ -141,7 +141,7 @@ def update_request(
     if "status" in body:
         db_record.status = RequestStatus(body["status"])
 
-    db_record.updated_at = datetime.utcnow()
+    db_record.updated_at = datetime.now(UTC)
     session.add(db_record)
     session.commit()
     session.refresh(db_record)
@@ -168,7 +168,7 @@ def send_ack(
     logger.info("=== FIN ENVOI ===")
 
     db_record.status = RequestStatus.route
-    db_record.updated_at = datetime.utcnow()
+    db_record.updated_at = datetime.now(UTC)
     session.add(db_record)
     session.commit()
 

@@ -57,7 +57,7 @@
     "rationale_fr": "Informations du prescripteur et cliniques manquantes — contacter le prescripteur."
   },
   "ack_message_fr": "Objet : Accusé de réception — Demande scanner pour Pierre DUBOIS\n\nCher Dr Lefèvre,\n\nNous accusons bonne réception de votre demande d'examen (scanner) pour le patient Pierre DUBOIS, adressée par Dr Lefèvre.\n\nNous avons pris note du caractère prioritaire de cette demande.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  1. Pourriez-vous nous fournir un numéro de téléphone ou un email pour joindre le prescripteur ?\n  2. Quelle région anatomique doit être examinée ?\n  3. L'examen est-il demandé avec ou sans injection de produit de contraste ?\n  4. Quelle est l'indication clinique justifiant cet examen ?\n  5. Pourriez-vous joindre l'ordonnance du médecin prescripteur ?\n\nNous vous serions reconnaissants de bien vouloir nous transmettre ces informations par retour de courrier ou par téléphone.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
-  "confidence": 0.7,
+  "confidence": 0.5,
   "source": {
     "channel": "email"
   }

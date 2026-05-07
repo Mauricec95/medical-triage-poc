@@ -1,7 +1,7 @@
 {
   "patient": {
     "full_name": "Georges LAMBERT\nN",
-    "dob": null,
+    "dob": "05/04/1950",
     "sex": "M",
     "phone": null,
     "email": null,
@@ -32,11 +32,6 @@
   ],
   "missing_fields": [
     {
-      "field_path": "patient.dob",
-      "reason": "Date de naissance absente",
-      "suggested_question_fr": "Quelle est la date de naissance du patient ?"
-    },
-    {
       "field_path": "patient.contact",
       "reason": "Aucun moyen de contacter le patient",
       "suggested_question_fr": "Pourriez-vous nous fournir un numéro de téléphone ou une adresse email pour joindre le patient ?"
@@ -62,8 +57,8 @@
     "target_contact": null,
     "rationale_fr": "Informations du prescripteur et cliniques manquantes — contacter le prescripteur."
   },
-  "ack_message_fr": "Objet : Accusé de réception — Demande radio pour Georges LAMBERT\nN\n\nCher Dr Jean-,\n\nNous accusons bonne réception de votre demande d'examen (radio) pour le patient Georges LAMBERT\nN, adressée par Dr Jean-.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  1. Quelle est la date de naissance du patient ?\n  2. Pourriez-vous nous fournir un numéro de téléphone ou une adresse email pour joindre le patient ?\n  3. Pourriez-vous nous fournir un numéro de téléphone ou un email pour joindre le prescripteur ?\n  4. Quelle région anatomique doit être examinée ?\n  5. Pourriez-vous joindre l'ordonnance du médecin prescripteur ?\n\nNous vous serions reconnaissants de bien vouloir nous transmettre ces informations par retour de courrier ou par téléphone.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
-  "confidence": 0.7,
+  "ack_message_fr": "Objet : Accusé de réception — Demande radio pour Georges LAMBERT\nN\n\nCher Dr Jean-,\n\nNous accusons bonne réception de votre demande d'examen (radio) pour le patient Georges LAMBERT\nN, adressée par Dr Jean-.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  1. Pourriez-vous nous fournir un numéro de téléphone ou une adresse email pour joindre le patient ?\n  2. Pourriez-vous nous fournir un numéro de téléphone ou un email pour joindre le prescripteur ?\n  3. Quelle région anatomique doit être examinée ?\n  4. Pourriez-vous joindre l'ordonnance du médecin prescripteur ?\n\nNous vous serions reconnaissants de bien vouloir nous transmettre ces informations par retour de courrier ou par téléphone.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
+  "confidence": 0.6,
   "source": {
     "channel": "fax"
   }

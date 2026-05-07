@@ -28,11 +28,6 @@
       "name": "ordonnance",
       "present": true,
       "notes": null
-    },
-    {
-      "name": "cr ",
-      "present": true,
-      "notes": null
     }
   ],
   "missing_fields": [],

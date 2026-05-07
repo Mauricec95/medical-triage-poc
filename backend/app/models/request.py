@@ -1,6 +1,6 @@
 """MedicalRequest Pydantic / SQLModel schema — single source of truth."""
 
-from datetime import datetime
+from datetime import UTC, datetime
 from enum import Enum
 from typing import Optional
 from uuid import uuid4
@@ -128,5 +128,9 @@ class MedicalRequestDB(SQLModel, table=True):
     status: RequestStatus = RequestStatus.a_valider
     data_json: str = SQLField(default="", sa_column=Column(Text))
     source_filename: Optional[str] = None
-    created_at: datetime = SQLField(default_factory=datetime.utcnow)
-    updated_at: datetime = SQLField(default_factory=datetime.utcnow)
+    created_at: datetime = SQLField(
+        default_factory=lambda: datetime.now(UTC),
+    )
+    updated_at: datetime = SQLField(
+        default_factory=lambda: datetime.now(UTC),
+    )

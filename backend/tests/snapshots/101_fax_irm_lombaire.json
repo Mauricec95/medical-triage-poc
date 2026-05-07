@@ -9,7 +9,7 @@
   },
   "prescriber": {
     "full_name": "Dr Marc LEBLANC",
-    "specialty": "Chirurgie",
+    "specialty": null,
     "service": null,
     "hospital_or_clinic": "Clinique du Parc\nTel",
     "phone": null,
@@ -26,11 +26,6 @@
   "required_attachments": [
     {
       "name": "ordonnance",
-      "present": true,
-      "notes": null
-    },
-    {
-      "name": "cr ",
       "present": true,
       "notes": null
     }

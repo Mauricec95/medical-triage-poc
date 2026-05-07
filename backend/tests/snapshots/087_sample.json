@@ -53,7 +53,7 @@
     "rationale_fr": "Informations du prescripteur et cliniques manquantes — contacter le prescripteur."
   },
   "ack_message_fr": "Objet : Accusé de réception — Demande IRM poignet sans injection pour Éric LEFEBVRE\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen (IRM poignet sans injection) pour le patient Éric LEFEBVRE, adressée par [Nom du prescripteur].\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  1. Quel est le nom du médecin prescripteur ?\n  2. Pourriez-vous nous fournir un numéro de téléphone ou un email pour joindre le prescripteur ?\n  3. Quelle est l'indication clinique justifiant cet examen ?\n\nNous vous serions reconnaissants de bien vouloir nous transmettre ces informations par retour de courrier ou par téléphone.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
-  "confidence": 0.7,
+  "confidence": 0.65,
   "source": {
     "channel": "email"
   }

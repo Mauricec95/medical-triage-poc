@@ -1,7 +1,7 @@
 {
   "patient": {
     "full_name": "Paul CHEVALIER\nN",
-    "dob": null,
+    "dob": "30/01/1945",
     "sex": "M",
     "phone": null,
     "email": null,
@@ -26,11 +26,6 @@
   "required_attachments": [],
   "missing_fields": [
     {
-      "field_path": "patient.dob",
-      "reason": "Date de naissance absente",
-      "suggested_question_fr": "Quelle est la date de naissance du patient ?"
-    },
-    {
       "field_path": "patient.contact",
       "reason": "Aucun moyen de contacter le patient",
       "suggested_question_fr": "Pourriez-vous nous fournir un numéro de téléphone ou une adresse email pour joindre le patient ?"
@@ -51,7 +46,7 @@
     "target_contact": null,
     "rationale_fr": "Informations du prescripteur manquantes — le contacter en priorité."
   },
-  "ack_message_fr": "Objet : Accusé de réception — Demande doppler arteriel pour Paul CHEVALIER\nN\n\nCher Dr Isabelle RENARD,\n\nNous accusons bonne réception de votre demande d'examen (doppler arteriel) pour le patient Paul CHEVALIER\nN, adressée par Dr Isabelle RENARD.\n\nNous avons noté le caractère URGENT de cette demande et la traiterons en priorité.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  1. Quelle est la date de naissance du patient ?\n  2. Pourriez-vous nous fournir un numéro de téléphone ou une adresse email pour joindre le patient ?\n  3. Pourriez-vous nous fournir un numéro de téléphone ou un email pour joindre le prescripteur ?\n  4. Pourriez-vous joindre l'ordonnance du médecin prescripteur ?\n\nNous vous serions reconnaissants de bien vouloir nous transmettre ces informations par retour de courrier ou par téléphone.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
+  "ack_message_fr": "Objet : Accusé de réception — Demande doppler arteriel pour Paul CHEVALIER\nN\n\nCher Dr Isabelle RENARD,\n\nNous accusons bonne réception de votre demande d'examen (doppler arteriel) pour le patient Paul CHEVALIER\nN, adressée par Dr Isabelle RENARD.\n\nNous avons noté le caractère URGENT de cette demande et la traiterons en priorité.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  1. Pourriez-vous nous fournir un numéro de téléphone ou une adresse email pour joindre le patient ?\n  2. Pourriez-vous nous fournir un numéro de téléphone ou un email pour joindre le prescripteur ?\n  3. Pourriez-vous joindre l'ordonnance du médecin prescripteur ?\n\nNous vous serions reconnaissants de bien vouloir nous transmettre ces informations par retour de courrier ou par téléphone.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
   "confidence": 0.7,
   "source": {
     "channel": "fax"

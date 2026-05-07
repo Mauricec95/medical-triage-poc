@@ -9,7 +9,7 @@
   },
   "prescriber": {
     "full_name": "Dr Philippe MOREAU",
-    "specialty": "Neuropédiatrie",
+    "specialty": "Pédiatrie",
     "service": null,
     "hospital_or_clinic": "Hôpital Femme Mère Enfant\nTél secrétariat",
     "phone": "04 27 85 56 67",
@@ -36,11 +36,6 @@
     },
     {
       "name": "créat",
-      "present": true,
-      "notes": null
-    },
-    {
-      "name": "cr ",
       "present": true,
       "notes": null
     }

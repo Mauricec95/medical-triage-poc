@@ -47,7 +47,7 @@
     "rationale_fr": "Informations cliniques ou pièces jointes manquantes — contacter le prescripteur."
   },
   "ack_message_fr": "Objet : Accusé de réception — Demande IRM épaule gauche avec injection pour Amina LAURENT\n\nCher Dr Sandrine BOYER,\n\nNous accusons bonne réception de votre demande d'examen (IRM épaule gauche avec injection) pour le patient Amina LAURENT, adressée par Dr Sandrine BOYER.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  1. Quelle est la date de naissance du patient ?\n  2. Un examen avec injection est demandé. Pourriez-vous fournir le résultat de créatinine récent du patient ?\n  3. Pourriez-vous joindre l'ordonnance du médecin prescripteur ?\n\nNous vous serions reconnaissants de bien vouloir nous transmettre ces informations par retour de courrier ou par téléphone.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
-  "confidence": 0.7,
+  "confidence": 0.65,
   "source": {
     "channel": "email"
   }
