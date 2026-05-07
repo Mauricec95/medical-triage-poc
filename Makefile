@@ -1,5 +1,5 @@
 .PHONY: dev dev-backend dev-frontend install install-backend install-frontend \
-       test lint demo docker-up docker-down clean
+       test lint demo demo-ingest docker-up docker-down clean
 
 # ─── Local development ────────────────────────────────────────────────
 
@@ -30,11 +30,26 @@ lint:
 
 # ─── Demo ─────────────────────────────────────────────────────────────
 
-demo:
-	@echo "🏥 Ingesting sample data..."
+demo-ingest:
+	@echo "Ingestion des échantillons..."
 	cd backend && python -m app.demo_ingest
-	@echo "🚀 Starting services..."
-	$(MAKE) dev
+	@echo "Ingestion terminée."
+
+demo:
+	@echo "=== Tri Médical — Démonstration ==="
+	@echo ""
+	@echo "1. Ingestion des échantillons..."
+	cd backend && python -m app.demo_ingest
+	@echo ""
+	@echo "2. Démarrage du backend (port 8000)..."
+	cd backend && uvicorn app.main:app --host 0.0.0.0 --port 8000 &
+	@sleep 2
+	@echo ""
+	@echo "3. Démarrage du frontend (port 3000)..."
+	@echo ""
+	@echo "=== Interface disponible sur http://localhost:3000 ==="
+	@echo ""
+	cd frontend && npm run dev
 
 # ─── Docker ───────────────────────────────────────────────────────────
 
@@ -48,5 +63,5 @@ docker-down:
 
 clean:
 	find . -type d -name __pycache__ -exec rm -rf {} + 2>/dev/null || true
-	rm -f backend/*.db data/*.db
+	rm -f backend/data/*.db data/*.db
 	rm -rf frontend/.next
