@@ -29,12 +29,21 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-gray-50 text-gray-900">
-        <header className="bg-white border-b border-gray-200 px-6 py-4">
+        <header className="bg-[#1e293b] px-6 py-4">
           <div className="max-w-7xl mx-auto flex items-center justify-between">
-            <h1 className="text-xl font-semibold text-blue-900">
-              Tri Médical — Secrétariat Radiologie
-            </h1>
-            <span className="text-sm text-gray-500">POC v0.1</span>
+            <div className="flex items-center gap-2">
+              <h1 className="text-lg font-bold text-white">
+                Secrétariat Radiologie
+              </h1>
+              <span className="text-sm text-gray-400">
+                / Gestion des demandes d&apos;examens
+              </span>
+            </div>
+            <div className="flex items-center gap-4">
+              <span className="text-sm text-gray-400">
+                POC &middot; Données synthétiques
+              </span>
+            </div>
           </div>
         </header>
         <main className="flex-1 max-w-7xl mx-auto w-full px-6 py-8">

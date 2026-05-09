@@ -17,10 +17,10 @@ interface RequestSummary {
 }
 
 const STATUS_LABELS: Record<string, { label: string; color: string }> = {
-  complet: { label: "Complet", color: "bg-green-100 text-green-800" },
-  incomplet: { label: "Incomplet", color: "bg-yellow-100 text-yellow-800" },
-  a_valider: { label: "À valider", color: "bg-blue-100 text-blue-800" },
-  route: { label: "Routé", color: "bg-purple-100 text-purple-800" },
+  complet: { label: "Complet", color: "bg-green-100 text-green-800 border-green-300" },
+  incomplet: { label: "Incomplet", color: "bg-orange-100 text-orange-800 border-orange-300" },
+  a_valider: { label: "À valider", color: "bg-blue-100 text-blue-800 border-blue-300" },
+  route: { label: "Routé", color: "bg-purple-100 text-purple-800 border-purple-300" },
 };
 
 const MODALITY_LABELS: Record<string, string> = {
@@ -32,14 +32,25 @@ const MODALITY_LABELS: Record<string, string> = {
   autre: "Autre",
 };
 
-const URGENCY_STYLES: Record<string, string> = {
-  urgent: "text-red-700 font-semibold",
-  prioritaire: "text-orange-600 font-medium",
-  routine: "text-gray-600",
-};
+const STATUS_FILTERS = [
+  { value: "", label: "Toutes" },
+  { value: "incomplet", label: "Incomplet" },
+  { value: "a_valider", label: "À valider" },
+  { value: "route", label: "Routé" },
+  { value: "nouveau", label: "Nouveau" },
+];
+
+const MODALITY_FILTERS = [
+  { value: "radio", label: "radio" },
+  { value: "IRM", label: "IRM" },
+  { value: "scanner", label: "scanner" },
+  { value: "doppler", label: "doppler" },
+  { value: "echo", label: "echo" },
+];
 
 export default function InboxPage() {
   const [requests, setRequests] = useState<RequestSummary[]>([]);
+  const [allRequests, setAllRequests] = useState<RequestSummary[]>([]);
   const [loading, setLoading] = useState(true);
   const [filterStatus, setFilterStatus] = useState<string>("");
   const [filterModality, setFilterModality] = useState<string>("");
@@ -61,8 +72,16 @@ export default function InboxPage() {
       .catch(() => setLoading(false));
   };
 
+  const fetchAllRequests = () => {
+    fetch(`${API_URL}/requests`)
+      .then((res) => res.json())
+      .then((data) => setAllRequests(data))
+      .catch(() => {});
+  };
+
   useEffect(() => {
     fetchRequests();
+    fetchAllRequests();
   }, [filterStatus, filterModality]);
 
   const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -81,6 +100,7 @@ export default function InboxPage() {
       });
       if (!res.ok) throw new Error(`Erreur ${res.status}`);
       fetchRequests();
+      fetchAllRequests();
     } catch (err) {
       setUploadError(
         err instanceof Error ? err.message : "Échec de l\u2019envoi"
@@ -91,71 +111,100 @@ export default function InboxPage() {
     }
   };
 
+  const totalCount = allRequests.length;
+  const incompletCount = allRequests.filter((r) => r.status === "incomplet").length;
+  const urgentCount = allRequests.filter((r) => r.urgency === "urgent").length;
+
+  const handleStatusFilter = (value: string) => {
+    setFilterStatus(value === filterStatus ? "" : value);
+  };
+
+  const handleModalityFilter = (value: string) => {
+    setFilterModality(value === filterModality ? "" : value);
+  };
+
+  const formatDate = (dateStr: string) => {
+    const d = new Date(dateStr);
+    return d.toLocaleDateString("fr-FR", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+    });
+  };
+
   return (
     <div>
-      {/* Header bar */}
-      <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-bold">Boîte de réception</h2>
-        <div className="flex items-center gap-3">
-          {/* Upload button */}
-          <label
-            className={`cursor-pointer inline-flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium text-white ${
-              uploading
-                ? "bg-gray-400 cursor-not-allowed"
-                : "bg-blue-600 hover:bg-blue-700"
+      {/* Stats bar */}
+      <div className="flex items-center gap-6 mb-6">
+        <div className="flex items-center gap-2">
+          <span className="text-3xl font-bold text-gray-900">{totalCount}</span>
+          <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">
+            Demandes
+          </span>
+        </div>
+        <div className="w-px h-10 bg-gray-300" />
+        <div className="flex items-center gap-2">
+          <span className="text-3xl font-bold text-orange-500">{incompletCount}</span>
+          <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">
+            Incomplètes
+          </span>
+        </div>
+        <div className="w-px h-10 bg-gray-300" />
+        <div className="flex items-center gap-2">
+          <span className="text-3xl font-bold text-red-500">{urgentCount}</span>
+          <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">
+            Urgentes
+          </span>
+        </div>
+        <div className="flex-1" />
+        <label
+          className={`cursor-pointer inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white ${
+            uploading
+              ? "bg-gray-400 cursor-not-allowed"
+              : "bg-emerald-600 hover:bg-emerald-700"
+          }`}
+        >
+          + Nouvelle demande
+          <input
+            ref={fileInputRef}
+            type="file"
+            className="hidden"
+            accept=".txt,.eml,.pdf,.png,.jpg,.jpeg,.tiff,.tif"
+            onChange={handleUpload}
+            disabled={uploading}
+          />
+        </label>
+      </div>
+
+      {/* Filter pills */}
+      <div className="flex items-center gap-2 mb-6 flex-wrap">
+        {STATUS_FILTERS.map((f) => (
+          <button
+            key={f.value}
+            onClick={() => handleStatusFilter(f.value)}
+            className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
+              filterStatus === f.value || (f.value === "" && filterStatus === "")
+                ? "bg-blue-600 text-white"
+                : "bg-white text-gray-700 border border-gray-300 hover:bg-gray-100"
             }`}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5-5m0 0l5 5m-5-5v12"
-              />
-            </svg>
-            {uploading ? "Envoi en cours\u2026" : "Importer un fichier"}
-            <input
-              ref={fileInputRef}
-              type="file"
-              className="hidden"
-              accept=".txt,.eml,.pdf,.png,.jpg,.jpeg,.tiff,.tif"
-              onChange={handleUpload}
-              disabled={uploading}
-            />
-          </label>
-
-          {/* Filters */}
-          <select
-            value={filterStatus}
-            onChange={(e) => setFilterStatus(e.target.value)}
-            className="border border-gray-300 rounded-md px-3 py-2 text-sm bg-white"
+            {f.label}
+          </button>
+        ))}
+        <div className="w-px h-6 bg-gray-300 mx-1" />
+        {MODALITY_FILTERS.map((f) => (
+          <button
+            key={f.value}
+            onClick={() => handleModalityFilter(f.value)}
+            className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
+              filterModality === f.value
+                ? "bg-blue-600 text-white"
+                : "bg-white text-gray-700 border border-gray-300 hover:bg-gray-100"
+            }`}
           >
-            <option value="">Tous les statuts</option>
-            <option value="complet">Complet</option>
-            <option value="incomplet">Incomplet</option>
-            <option value="a_valider">À valider</option>
-            <option value="route">Routé</option>
-          </select>
-          <select
-            value={filterModality}
-            onChange={(e) => setFilterModality(e.target.value)}
-            className="border border-gray-300 rounded-md px-3 py-2 text-sm bg-white"
-          >
-            <option value="">Toutes les modalités</option>
-            <option value="scanner">Scanner</option>
-            <option value="IRM">IRM</option>
-            <option value="doppler">Doppler</option>
-            <option value="echo">Écho</option>
-            <option value="radio">Radio</option>
-            <option value="autre">Autre</option>
-          </select>
-        </div>
+            {f.label}
+          </button>
+        ))}
       </div>
 
       {uploadError && (
@@ -167,10 +216,10 @@ export default function InboxPage() {
       {loading ? (
         <div className="flex items-center justify-center py-16">
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600" />
-          <span className="ml-3 text-gray-500">Chargement…</span>
+          <span className="ml-3 text-gray-500">Chargement...</span>
         </div>
       ) : requests.length === 0 ? (
-        <div className="text-center py-16 bg-white rounded-lg shadow">
+        <div className="text-center py-16 bg-white rounded-xl shadow-sm">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="mx-auto h-12 w-12 text-gray-300"
@@ -195,107 +244,53 @@ export default function InboxPage() {
           </p>
         </div>
       ) : (
-        <div className="bg-white rounded-lg shadow overflow-hidden">
-          <table className="min-w-full divide-y divide-gray-200">
-            <thead className="bg-gray-50">
-              <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Patient
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Modalité
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Urgence
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Statut
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Manquants
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Source
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Date
-                </th>
-              </tr>
-            </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
-              {requests.map((req) => {
-                const statusInfo = STATUS_LABELS[req.status] || {
-                  label: req.status,
-                  color: "bg-gray-100 text-gray-800",
-                };
-                const urgencyClass =
-                  URGENCY_STYLES[req.urgency || "routine"] ||
-                  URGENCY_STYLES.routine;
-                return (
-                  <tr key={req.id} className="hover:bg-gray-50">
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <Link
-                        href={`/requests/${req.id}`}
-                        className="text-blue-600 hover:text-blue-800 font-medium"
-                      >
+        <div className="flex flex-col gap-3">
+          {requests.map((req) => {
+            const statusInfo = STATUS_LABELS[req.status] || {
+              label: req.status,
+              color: "bg-gray-100 text-gray-800 border-gray-300",
+            };
+            return (
+              <Link
+                key={req.id}
+                href={`/requests/${req.id}`}
+                className="block bg-white rounded-xl border border-gray-200 px-6 py-5 hover:shadow-md hover:border-gray-300 transition-all"
+              >
+                <div className="flex items-start justify-between">
+                  <div className="flex items-start gap-3">
+                    <div className="mt-1.5 w-3 h-3 rounded-full bg-gray-300 shrink-0" />
+                    <div>
+                      <div className="font-semibold text-gray-900 text-base">
                         {req.patient_name || "(Inconnu)"}
-                      </Link>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm">
-                      {req.modality
-                        ? MODALITY_LABELS[req.modality] || req.modality
-                        : "—"}
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm">
-                      <span className={urgencyClass}>
-                        {req.urgency === "urgent"
-                          ? "URGENT"
-                          : req.urgency === "prioritaire"
-                            ? "Prioritaire"
-                            : "Routine"}
+                      </div>
+                      <div className="text-sm text-gray-500 mt-0.5">
+                        {req.modality
+                          ? MODALITY_LABELS[req.modality] || req.modality
+                          : "—"}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span
+                      className={`inline-flex px-3 py-1 rounded-full text-xs font-semibold border ${statusInfo.color}`}
+                    >
+                      {statusInfo.label}
+                    </span>
+                    {req.missing_count > 0 && (
+                      <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-orange-100 text-orange-700 text-xs font-bold border border-orange-300">
+                        {req.missing_count}
                       </span>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <span
-                        className={`inline-flex px-2 py-0.5 rounded-full text-xs font-medium ${statusInfo.color}`}
-                      >
-                        {statusInfo.label}
-                      </span>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-center">
-                      {req.missing_count > 0 ? (
-                        <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-red-100 text-red-700 text-xs font-bold">
-                          {req.missing_count}
-                        </span>
-                      ) : (
-                        <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-green-100 text-green-700 text-xs font-bold">
-                          0
-                        </span>
-                      )}
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 max-w-[160px] truncate">
-                      {req.source_filename || "—"}
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      {new Date(req.created_at).toLocaleDateString("fr-FR", {
-                        day: "2-digit",
-                        month: "2-digit",
-                        year: "numeric",
-                        hour: "2-digit",
-                        minute: "2-digit",
-                      })}
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-
-          {/* Summary bar */}
-          <div className="bg-gray-50 px-6 py-3 border-t border-gray-200 text-sm text-gray-500">
-            {requests.length} demande{requests.length > 1 ? "s" : ""}
-            {filterStatus || filterModality ? " (filtrées)" : ""}
-          </div>
+                    )}
+                  </div>
+                </div>
+                <div className="text-right mt-1">
+                  <span className="text-xs text-gray-400">
+                    {formatDate(req.created_at)}
+                  </span>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       )}
     </div>
