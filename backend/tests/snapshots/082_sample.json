@@ -1,0 +1,49 @@
+{
+  "patient": {
+    "full_name": "Christine NOEL",
+    "dob": "15/08/1948",
+    "sex": "F",
+    "phone": "06 17 57 46 19",
+    "email": "dr.antoine.fontaine@hopital-edouard-herriot.fr",
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Antoine FONTAINE",
+    "specialty": "Gynécologie",
+    "service": null,
+    "hospital_or_clinic": "Hôpital de la Croix-Rousse\nTél",
+    "phone": "04 31 88 86 74",
+    "email": "dr.antoine.fontaine@hopital-edouard-herriot.fr"
+  },
+  "exam": {
+    "modality": "IRM",
+    "region": "épaule droite",
+    "with_injection": null,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Suspicion de rupture de la coiffe des rotateurs",
+  "required_attachments": [],
+  "missing_fields": [
+    {
+      "field_path": "exam.with_injection",
+      "reason": "Injection non précisée pour cet examen",
+      "suggested_question_fr": "L'examen est-il demandé avec ou sans injection de produit de contraste ?"
+    },
+    {
+      "field_path": "required_attachments.ordonnance",
+      "reason": "Ordonnance non jointe ou non identifiée",
+      "suggested_question_fr": "Pourriez-vous joindre l'ordonnance du médecin prescripteur ?"
+    }
+  ],
+  "routing": {
+    "next_action": "contact_prescriber",
+    "target_contact": "dr.antoine.fontaine@hopital-edouard-herriot.fr",
+    "rationale_fr": "Informations cliniques ou pièces jointes manquantes — contacter le prescripteur."
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande IRM épaule droite pour Christine NOEL\n\nCher Dr Antoine FONTAINE,\n\nNous accusons bonne réception de votre demande d'examen (IRM épaule droite) pour le patient Christine NOEL, adressée par Dr Antoine FONTAINE.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  1. L'examen est-il demandé avec ou sans injection de produit de contraste ?\n  2. Pourriez-vous joindre l'ordonnance du médecin prescripteur ?\n\nNous vous serions reconnaissants de bien vouloir nous transmettre ces informations par retour de courrier ou par téléphone.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
+  "confidence": 0.8,
+  "source": {
+    "channel": "email"
+  }
+}

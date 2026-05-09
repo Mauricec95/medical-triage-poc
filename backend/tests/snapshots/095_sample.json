@@ -1,0 +1,44 @@
+{
+  "patient": {
+    "full_name": "Claude RICHARD",
+    "dob": "17/05/1980",
+    "sex": "M",
+    "phone": "06 46 55 16 93",
+    "email": "c.richard@sfr.fr",
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Christophe LECLERC",
+    "specialty": "Néphrologie",
+    "service": null,
+    "hospital_or_clinic": "Hôpital Nord-Ouest\nTél secrétariat",
+    "phone": "04 54 25 57 65",
+    "email": "dr.christophe.leclerc@clinique-mutualiste.fr"
+  },
+  "exam": {
+    "modality": "IRM",
+    "region": "pelvienne",
+    "with_injection": false,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Douleurs pelviennes chroniques",
+  "required_attachments": [
+    {
+      "name": "ordonnance",
+      "present": true,
+      "notes": null
+    }
+  ],
+  "missing_fields": [],
+  "routing": {
+    "next_action": "schedule",
+    "target_contact": "06 46 55 16 93",
+    "rationale_fr": "Demande complète — à programmer."
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande IRM pelvienne sans injection pour Claude RICHARD\n\nCher Dr Christophe LECLERC,\n\nNous accusons bonne réception de votre demande d'examen (IRM pelvienne sans injection) pour le patient Claude RICHARD, adressée par Dr Christophe LECLERC.\n\nVotre demande est complète et sera traitée dans les meilleurs délais. Nous vous recontacterons pour confirmer le créneau de rendez-vous.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
+  "confidence": 0.95,
+  "source": {
+    "channel": "email"
+  }
+}

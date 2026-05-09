@@ -1,0 +1,50 @@
+{
+  "patient": {
+    "full_name": "Julie DUVAL",
+    "dob": "15/01/2010",
+    "sex": "F",
+    "phone": "07 62 16 34 76",
+    "email": "dr.jeanmarc.blanc@chu-lyon.fr",
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Jean-",
+    "specialty": "Gynécologie",
+    "service": null,
+    "hospital_or_clinic": "Centre Hospitalier de Villefranche\nTél",
+    "phone": "04 66 89 73 90",
+    "email": "dr.jeanmarc.blanc@chu-lyon.fr"
+  },
+  "exam": {
+    "modality": "IRM",
+    "region": "mammaire",
+    "with_injection": true,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Bilan complémentaire après mammographie ACR4",
+  "required_attachments": [
+    {
+      "name": "ordonnance",
+      "present": true,
+      "notes": null
+    }
+  ],
+  "missing_fields": [
+    {
+      "field_path": "required_attachments.creatinine",
+      "reason": "IRM avec injection : résultat de créatinine requis",
+      "suggested_question_fr": "Un examen avec injection est demandé. Pourriez-vous fournir le résultat de créatinine récent du patient ?"
+    }
+  ],
+  "routing": {
+    "next_action": "contact_prescriber",
+    "target_contact": "dr.jeanmarc.blanc@chu-lyon.fr",
+    "rationale_fr": "Informations cliniques ou pièces jointes manquantes — contacter le prescripteur."
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande IRM mammaire avec injection pour Julie DUVAL\n\nCher Dr Jean-,\n\nNous accusons bonne réception de votre demande d'examen (IRM mammaire avec injection) pour le patient Julie DUVAL, adressée par Dr Jean-.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  1. Un examen avec injection est demandé. Pourriez-vous fournir le résultat de créatinine récent du patient ?\n\nNous vous serions reconnaissants de bien vouloir nous transmettre ces informations par retour de courrier ou par téléphone.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
+  "confidence": 0.9,
+  "source": {
+    "channel": "email"
+  }
+}

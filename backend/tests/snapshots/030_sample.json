@@ -1,0 +1,49 @@
+{
+  "patient": {
+    "full_name": "Valérie GARNIER",
+    "dob": "04/12/1960",
+    "sex": "F",
+    "phone": "07 54 49 39 38",
+    "email": "v.garnier@orange.fr",
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Christophe MARECHAL",
+    "specialty": "Cardiologie",
+    "service": null,
+    "hospital_or_clinic": "Hôpital de jour",
+    "phone": "04 44 61 52 45",
+    "email": "dr.christophe.marechal@hopital-croix-rousse.fr"
+  },
+  "exam": {
+    "modality": "IRM",
+    "region": "épaule droite",
+    "with_injection": false,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Suspicion de rupture de la coiffe des rotateurs",
+  "required_attachments": [
+    {
+      "name": "ordonnance",
+      "present": true,
+      "notes": null
+    },
+    {
+      "name": "allergies",
+      "present": true,
+      "notes": null
+    }
+  ],
+  "missing_fields": [],
+  "routing": {
+    "next_action": "schedule",
+    "target_contact": "07 54 49 39 38",
+    "rationale_fr": "Demande complète — à programmer."
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande IRM épaule droite sans injection pour Valérie GARNIER\n\nCher Dr Christophe MARECHAL,\n\nNous accusons bonne réception de votre demande d'examen (IRM épaule droite sans injection) pour le patient Valérie GARNIER, adressée par Dr Christophe MARECHAL.\n\nVotre demande est complète et sera traitée dans les meilleurs délais. Nous vous recontacterons pour confirmer le créneau de rendez-vous.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
+  "confidence": 0.95,
+  "source": {
+    "channel": "email"
+  }
+}

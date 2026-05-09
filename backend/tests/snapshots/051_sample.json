@@ -1,0 +1,55 @@
+{
+  "patient": {
+    "full_name": "Thierry KONÉ",
+    "dob": "26/11/2015",
+    "sex": "M",
+    "phone": "06 44 28 19 17",
+    "email": "t.kone@gmail.com",
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Émilie SIMON",
+    "specialty": "Chirurgie orthopédique",
+    "service": null,
+    "hospital_or_clinic": "Hôpital Édouard Herriot\nTél secrétariat",
+    "phone": "04 59 86 82 46",
+    "email": "dr.emilie.simon@hopital-edouard-herriot.fr"
+  },
+  "exam": {
+    "modality": "IRM",
+    "region": null,
+    "with_injection": null,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Gonalgie post-traumatique",
+  "required_attachments": [
+    {
+      "name": "ordonnance",
+      "present": true,
+      "notes": null
+    }
+  ],
+  "missing_fields": [
+    {
+      "field_path": "exam.region",
+      "reason": "Région anatomique non précisée",
+      "suggested_question_fr": "Quelle région anatomique doit être examinée ?"
+    },
+    {
+      "field_path": "exam.with_injection",
+      "reason": "Injection non précisée pour cet examen",
+      "suggested_question_fr": "L'examen est-il demandé avec ou sans injection de produit de contraste ?"
+    }
+  ],
+  "routing": {
+    "next_action": "contact_prescriber",
+    "target_contact": "dr.emilie.simon@hopital-edouard-herriot.fr",
+    "rationale_fr": "Informations cliniques ou pièces jointes manquantes — contacter le prescripteur."
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande IRM pour Thierry KONÉ\n\nCher Dr Émilie SIMON,\n\nNous accusons bonne réception de votre demande d'examen (IRM) pour le patient Thierry KONÉ, adressée par Dr Émilie SIMON.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  1. Quelle région anatomique doit être examinée ?\n  2. L'examen est-il demandé avec ou sans injection de produit de contraste ?\n\nNous vous serions reconnaissants de bien vouloir nous transmettre ces informations par retour de courrier ou par téléphone.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
+  "confidence": 0.8,
+  "source": {
+    "channel": "email"
+  }
+}

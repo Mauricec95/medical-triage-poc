@@ -1,0 +1,69 @@
+{
+  "patient": {
+    "full_name": null,
+    "dob": null,
+    "sex": null,
+    "phone": null,
+    "email": null,
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Catherine PICARD",
+    "specialty": "Gériatrie",
+    "service": null,
+    "hospital_or_clinic": "Hôpital Nord-Ouest",
+    "phone": null,
+    "email": "dr.catherine.picard@chu-st-etienne.fr"
+  },
+  "exam": {
+    "modality": "echo",
+    "region": null,
+    "with_injection": null,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": null,
+  "required_attachments": [],
+  "missing_fields": [
+    {
+      "field_path": "patient.full_name",
+      "reason": "Nom du patient absent",
+      "suggested_question_fr": "Pourriez-vous nous communiquer le nom complet du patient ?"
+    },
+    {
+      "field_path": "patient.dob",
+      "reason": "Date de naissance absente",
+      "suggested_question_fr": "Quelle est la date de naissance du patient ?"
+    },
+    {
+      "field_path": "patient.contact",
+      "reason": "Aucun moyen de contacter le patient",
+      "suggested_question_fr": "Pourriez-vous nous fournir un numéro de téléphone ou une adresse email pour joindre le patient ?"
+    },
+    {
+      "field_path": "exam.region",
+      "reason": "Région anatomique non précisée",
+      "suggested_question_fr": "Quelle région anatomique doit être examinée ?"
+    },
+    {
+      "field_path": "clinical_indication",
+      "reason": "Indication clinique absente",
+      "suggested_question_fr": "Quelle est l'indication clinique justifiant cet examen ?"
+    },
+    {
+      "field_path": "required_attachments.ordonnance",
+      "reason": "Ordonnance non jointe ou non identifiée",
+      "suggested_question_fr": "Pourriez-vous joindre l'ordonnance du médecin prescripteur ?"
+    }
+  ],
+  "routing": {
+    "next_action": "contact_prescriber",
+    "target_contact": "dr.catherine.picard@chu-st-etienne.fr",
+    "rationale_fr": "Informations cliniques ou pièces jointes manquantes — contacter le prescripteur."
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande echo pour [Nom du patient]\n\nCher Dr Catherine PICARD,\n\nNous accusons bonne réception de votre demande d'examen (echo) pour le patient [Nom du patient], adressée par Dr Catherine PICARD.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  1. Pourriez-vous nous communiquer le nom complet du patient ?\n  2. Quelle est la date de naissance du patient ?\n  3. Pourriez-vous nous fournir un numéro de téléphone ou une adresse email pour joindre le patient ?\n  4. Quelle région anatomique doit être examinée ?\n  5. Quelle est l'indication clinique justifiant cet examen ?\n  6. Pourriez-vous joindre l'ordonnance du médecin prescripteur ?\n\nNous vous serions reconnaissants de bien vouloir nous transmettre ces informations par retour de courrier ou par téléphone.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
+  "confidence": 0.5,
+  "source": {
+    "channel": "email"
+  }
+}

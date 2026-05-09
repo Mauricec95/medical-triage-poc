@@ -1,0 +1,44 @@
+{
+  "patient": {
+    "full_name": "Aïcha BENAISSA",
+    "dob": "05/02/1990",
+    "sex": "F",
+    "phone": "06 55 44 33 22",
+    "email": "a.benaissa@free.fr",
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Nadia HAMMADI",
+    "specialty": "Gynécologie",
+    "service": null,
+    "hospital_or_clinic": "CHU Lyon Sud\nTél",
+    "phone": "04 72 66 77 88",
+    "email": "dr.nadia.hammadi@chu-lyon.fr"
+  },
+  "exam": {
+    "modality": "IRM",
+    "region": "pelvienne",
+    "with_injection": false,
+    "protocol_notes": null,
+    "urgency": "urgent"
+  },
+  "clinical_indication": "Suspicion de migration de DIU au cuivre posé il y a 6 mois. Douleurs pelviennes aiguës depuis 48h. ASP réalisé ce jour montrant DIU non visible en position intra-utérine. Nécessité de localisation précise avant intervention chirurgicale",
+  "required_attachments": [
+    {
+      "name": "ordonnance",
+      "present": true,
+      "notes": null
+    }
+  ],
+  "missing_fields": [],
+  "routing": {
+    "next_action": "await_radiologist_validation",
+    "target_contact": "dr.nadia.hammadi@chu-lyon.fr",
+    "rationale_fr": "Demande urgente complète — soumise au radiologue pour validation."
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande IRM pelvienne sans injection pour Aïcha BENAISSA\n\nCher Dr Nadia HAMMADI,\n\nNous accusons bonne réception de votre demande d'examen (IRM pelvienne sans injection) pour le patient Aïcha BENAISSA, adressée par Dr Nadia HAMMADI.\n\nNous avons noté le caractère URGENT de cette demande et la traiterons en priorité.\n\nVotre demande est complète et sera traitée dans les meilleurs délais. Nous vous recontacterons pour confirmer le créneau de rendez-vous.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
+  "confidence": 0.95,
+  "source": {
+    "channel": "email"
+  }
+}

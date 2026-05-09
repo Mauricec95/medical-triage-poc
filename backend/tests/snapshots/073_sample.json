@@ -1,0 +1,49 @@
+{
+  "patient": {
+    "full_name": "Amina ANDRE",
+    "dob": "27/06/1992",
+    "sex": "F",
+    "phone": "07 18 21 20 21",
+    "email": "dr.olivier.boyer@clinique-sj.fr",
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Olivier BOYER",
+    "specialty": "Chirurgie orthopédique",
+    "service": null,
+    "hospital_or_clinic": "Hôpital Édouard Herriot\nTél",
+    "phone": "04 75 22 57 26",
+    "email": "dr.olivier.boyer@clinique-sj.fr"
+  },
+  "exam": {
+    "modality": "IRM",
+    "region": "rachis lombaire",
+    "with_injection": null,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Sciatalgie L5 gauche rebelle",
+  "required_attachments": [],
+  "missing_fields": [
+    {
+      "field_path": "exam.with_injection",
+      "reason": "Injection non précisée pour cet examen",
+      "suggested_question_fr": "L'examen est-il demandé avec ou sans injection de produit de contraste ?"
+    },
+    {
+      "field_path": "required_attachments.ordonnance",
+      "reason": "Ordonnance non jointe ou non identifiée",
+      "suggested_question_fr": "Pourriez-vous joindre l'ordonnance du médecin prescripteur ?"
+    }
+  ],
+  "routing": {
+    "next_action": "contact_prescriber",
+    "target_contact": "dr.olivier.boyer@clinique-sj.fr",
+    "rationale_fr": "Informations cliniques ou pièces jointes manquantes — contacter le prescripteur."
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande IRM rachis lombaire pour Amina ANDRE\n\nCher Dr Olivier BOYER,\n\nNous accusons bonne réception de votre demande d'examen (IRM rachis lombaire) pour le patient Amina ANDRE, adressée par Dr Olivier BOYER.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  1. L'examen est-il demandé avec ou sans injection de produit de contraste ?\n  2. Pourriez-vous joindre l'ordonnance du médecin prescripteur ?\n\nNous vous serions reconnaissants de bien vouloir nous transmettre ces informations par retour de courrier ou par téléphone.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
+  "confidence": 0.8,
+  "source": {
+    "channel": "email"
+  }
+}

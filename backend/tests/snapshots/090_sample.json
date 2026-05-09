@@ -1,0 +1,60 @@
+{
+  "patient": {
+    "full_name": "Emma MERCIER",
+    "dob": "12/02/1989",
+    "sex": "F",
+    "phone": "06 46 70 99 27",
+    "email": null,
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": null,
+    "specialty": null,
+    "service": null,
+    "hospital_or_clinic": null,
+    "phone": null,
+    "email": null
+  },
+  "exam": {
+    "modality": "IRM",
+    "region": "poignet",
+    "with_injection": false,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": null,
+  "required_attachments": [
+    {
+      "name": "ordonnance",
+      "present": true,
+      "notes": null
+    }
+  ],
+  "missing_fields": [
+    {
+      "field_path": "prescriber.full_name",
+      "reason": "Nom du prescripteur non identifié",
+      "suggested_question_fr": "Quel est le nom du médecin prescripteur ?"
+    },
+    {
+      "field_path": "prescriber.contact",
+      "reason": "Aucun contact du prescripteur (téléphone ou email)",
+      "suggested_question_fr": "Pourriez-vous nous fournir un numéro de téléphone ou un email pour joindre le prescripteur ?"
+    },
+    {
+      "field_path": "clinical_indication",
+      "reason": "Indication clinique absente",
+      "suggested_question_fr": "Quelle est l'indication clinique justifiant cet examen ?"
+    }
+  ],
+  "routing": {
+    "next_action": "contact_prescriber",
+    "target_contact": null,
+    "rationale_fr": "Informations du prescripteur et cliniques manquantes — contacter le prescripteur."
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande IRM poignet sans injection pour Emma MERCIER\n\nMadame, Monsieur,\n\nNous accusons bonne réception de votre demande d'examen (IRM poignet sans injection) pour le patient Emma MERCIER, adressée par [Nom du prescripteur].\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  1. Quel est le nom du médecin prescripteur ?\n  2. Pourriez-vous nous fournir un numéro de téléphone ou un email pour joindre le prescripteur ?\n  3. Quelle est l'indication clinique justifiant cet examen ?\n\nNous vous serions reconnaissants de bien vouloir nous transmettre ces informations par retour de courrier ou par téléphone.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
+  "confidence": 0.65,
+  "source": {
+    "channel": "email"
+  }
+}

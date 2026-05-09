@@ -1,0 +1,50 @@
+{
+  "patient": {
+    "full_name": "Yves GAUTHIER",
+    "dob": "25/03/1967",
+    "sex": "M",
+    "phone": "07 78 39 74 81",
+    "email": "dr.eric.fontaine@clinique-sj.fr",
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Éric FONTAINE",
+    "specialty": "Dermatologie",
+    "service": null,
+    "hospital_or_clinic": "Hôpital Édouard Herriot\nTél",
+    "phone": "04 65 19 60 15",
+    "email": "dr.eric.fontaine@clinique-sj.fr"
+  },
+  "exam": {
+    "modality": "scanner",
+    "region": "thoraco-abdomino-pelvien",
+    "with_injection": true,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Bilan d'extension néoplasique",
+  "required_attachments": [
+    {
+      "name": "ordonnance",
+      "present": true,
+      "notes": null
+    }
+  ],
+  "missing_fields": [
+    {
+      "field_path": "required_attachments.creatinine",
+      "reason": "scanner avec injection : résultat de créatinine requis",
+      "suggested_question_fr": "Un examen avec injection est demandé. Pourriez-vous fournir le résultat de créatinine récent du patient ?"
+    }
+  ],
+  "routing": {
+    "next_action": "contact_prescriber",
+    "target_contact": "dr.eric.fontaine@clinique-sj.fr",
+    "rationale_fr": "Informations cliniques ou pièces jointes manquantes — contacter le prescripteur."
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande scanner thoraco-abdomino-pelvien avec injection pour Yves GAUTHIER\n\nCher Dr Éric FONTAINE,\n\nNous accusons bonne réception de votre demande d'examen (scanner thoraco-abdomino-pelvien avec injection) pour le patient Yves GAUTHIER, adressée par Dr Éric FONTAINE.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  1. Un examen avec injection est demandé. Pourriez-vous fournir le résultat de créatinine récent du patient ?\n\nNous vous serions reconnaissants de bien vouloir nous transmettre ces informations par retour de courrier ou par téléphone.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
+  "confidence": 0.9,
+  "source": {
+    "channel": "email"
+  }
+}

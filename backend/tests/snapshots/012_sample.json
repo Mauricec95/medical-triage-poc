@@ -1,0 +1,44 @@
+{
+  "patient": {
+    "full_name": "Sandrine MEYER",
+    "dob": "26/05/2015",
+    "sex": "F",
+    "phone": "06 53 23 21 58",
+    "email": "s.meyer@free.fr",
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Sylvie BERGER",
+    "specialty": "Orthopédie",
+    "service": null,
+    "hospital_or_clinic": "CH Bourg-en-Bresse\nTél secrétariat",
+    "phone": "04 65 54 87 43",
+    "email": "dr.sylvie.berger@chu-lyon.fr"
+  },
+  "exam": {
+    "modality": "IRM",
+    "region": "poignet",
+    "with_injection": false,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Douleur chronique du poignet, suspicion TFCC",
+  "required_attachments": [
+    {
+      "name": "ordonnance",
+      "present": true,
+      "notes": null
+    }
+  ],
+  "missing_fields": [],
+  "routing": {
+    "next_action": "schedule",
+    "target_contact": "06 53 23 21 58",
+    "rationale_fr": "Demande complète — à programmer."
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande IRM poignet sans injection pour Sandrine MEYER\n\nCher Dr Sylvie BERGER,\n\nNous accusons bonne réception de votre demande d'examen (IRM poignet sans injection) pour le patient Sandrine MEYER, adressée par Dr Sylvie BERGER.\n\nVotre demande est complète et sera traitée dans les meilleurs délais. Nous vous recontacterons pour confirmer le créneau de rendez-vous.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
+  "confidence": 0.95,
+  "source": {
+    "channel": "email"
+  }
+}

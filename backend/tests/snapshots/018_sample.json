@@ -1,0 +1,50 @@
+{
+  "patient": {
+    "full_name": "René MATHIEU",
+    "dob": "25/09/1960",
+    "sex": "M",
+    "phone": "07 49 40 17 40",
+    "email": "r.mathieu@free.fr",
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Émilie LAMBERT",
+    "specialty": "Médecine générale",
+    "service": null,
+    "hospital_or_clinic": "Centre Hospitalier de Villefranche\nTél secrétariat",
+    "phone": "04 30 72 18 78",
+    "email": "dr.emilie.lambert@clinique-sj.fr"
+  },
+  "exam": {
+    "modality": "IRM",
+    "region": "scrotale",
+    "with_injection": null,
+    "protocol_notes": null,
+    "urgency": "urgent"
+  },
+  "clinical_indication": "Douleur testiculaire aiguë",
+  "required_attachments": [
+    {
+      "name": "ordonnance",
+      "present": true,
+      "notes": null
+    }
+  ],
+  "missing_fields": [
+    {
+      "field_path": "exam.with_injection",
+      "reason": "Injection non précisée pour cet examen",
+      "suggested_question_fr": "L'examen est-il demandé avec ou sans injection de produit de contraste ?"
+    }
+  ],
+  "routing": {
+    "next_action": "contact_prescriber",
+    "target_contact": "dr.emilie.lambert@clinique-sj.fr",
+    "rationale_fr": "Informations cliniques ou pièces jointes manquantes — contacter le prescripteur."
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande IRM scrotale pour René MATHIEU\n\nCher Dr Émilie LAMBERT,\n\nNous accusons bonne réception de votre demande d'examen (IRM scrotale) pour le patient René MATHIEU, adressée par Dr Émilie LAMBERT.\n\nNous avons noté le caractère URGENT de cette demande et la traiterons en priorité.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  1. L'examen est-il demandé avec ou sans injection de produit de contraste ?\n\nNous vous serions reconnaissants de bien vouloir nous transmettre ces informations par retour de courrier ou par téléphone.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
+  "confidence": 0.9,
+  "source": {
+    "channel": "email"
+  }
+}

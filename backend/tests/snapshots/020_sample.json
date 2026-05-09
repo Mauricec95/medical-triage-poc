@@ -1,0 +1,44 @@
+{
+  "patient": {
+    "full_name": "Françoise COULIBALY",
+    "dob": "19/04/2010",
+    "sex": "F",
+    "phone": "06 52 19 75 40",
+    "email": "f.coulibaly@wanadoo.fr",
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Isabelle BERGER",
+    "specialty": "Pneumologie",
+    "service": null,
+    "hospital_or_clinic": "Hôpital de la Croix-Rousse\nTél secrétariat",
+    "phone": "04 82 37 79 26",
+    "email": "dr.isabelle.berger@hopital-edouard-herriot.fr"
+  },
+  "exam": {
+    "modality": "IRM",
+    "region": "épaule droite",
+    "with_injection": false,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Suspicion de rupture de la coiffe des rotateurs",
+  "required_attachments": [
+    {
+      "name": "ordonnance",
+      "present": true,
+      "notes": null
+    }
+  ],
+  "missing_fields": [],
+  "routing": {
+    "next_action": "schedule",
+    "target_contact": "06 52 19 75 40",
+    "rationale_fr": "Demande complète — à programmer."
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande IRM épaule droite sans injection pour Françoise COULIBALY\n\nCher Dr Isabelle BERGER,\n\nNous accusons bonne réception de votre demande d'examen (IRM épaule droite sans injection) pour le patient Françoise COULIBALY, adressée par Dr Isabelle BERGER.\n\nVotre demande est complète et sera traitée dans les meilleurs délais. Nous vous recontacterons pour confirmer le créneau de rendez-vous.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
+  "confidence": 0.95,
+  "source": {
+    "channel": "email"
+  }
+}

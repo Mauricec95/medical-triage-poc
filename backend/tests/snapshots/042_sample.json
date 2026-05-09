@@ -1,0 +1,44 @@
+{
+  "patient": {
+    "full_name": "Mourad LEFEVRE",
+    "dob": "09/12/1999",
+    "sex": "M",
+    "phone": null,
+    "email": "dr.david.mercier@chu-lyon.fr",
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr David MERCIER",
+    "specialty": "Orthopédie",
+    "service": null,
+    "hospital_or_clinic": "Hôpital Édouard Herriot\nEmail",
+    "phone": null,
+    "email": "dr.david.mercier@chu-lyon.fr"
+  },
+  "exam": {
+    "modality": "IRM",
+    "region": "rachis cervical",
+    "with_injection": false,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Cervicalgies avec névralgie cervico-brachiale",
+  "required_attachments": [
+    {
+      "name": "ordonnance",
+      "present": true,
+      "notes": null
+    }
+  ],
+  "missing_fields": [],
+  "routing": {
+    "next_action": "schedule",
+    "target_contact": "dr.david.mercier@chu-lyon.fr",
+    "rationale_fr": "Demande complète — à programmer."
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande IRM rachis cervical sans injection pour Mourad LEFEVRE\n\nCher Dr David MERCIER,\n\nNous accusons bonne réception de votre demande d'examen (IRM rachis cervical sans injection) pour le patient Mourad LEFEVRE, adressée par Dr David MERCIER.\n\nVotre demande est complète et sera traitée dans les meilleurs délais. Nous vous recontacterons pour confirmer le créneau de rendez-vous.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
+  "confidence": 0.95,
+  "source": {
+    "channel": "email"
+  }
+}

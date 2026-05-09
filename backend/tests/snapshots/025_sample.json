@@ -1,0 +1,50 @@
+{
+  "patient": {
+    "full_name": "David DIALLO",
+    "dob": "11/09/2012",
+    "sex": "M",
+    "phone": "06 95 92 48 68",
+    "email": "d.diallo@sfr.fr",
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Émilie RICHARD",
+    "specialty": "Rhumatologie",
+    "service": null,
+    "hospital_or_clinic": "Centre Hospitalier de Villefranche\nTél secrétariat",
+    "phone": "04 29 11 68 89",
+    "email": "dr.emilie.richard@hopital-croix-rousse.fr"
+  },
+  "exam": {
+    "modality": "IRM",
+    "region": "épaule gauche",
+    "with_injection": true,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Instabilité récidivante de l'épaule",
+  "required_attachments": [
+    {
+      "name": "ordonnance",
+      "present": true,
+      "notes": null
+    }
+  ],
+  "missing_fields": [
+    {
+      "field_path": "required_attachments.creatinine",
+      "reason": "IRM avec injection : résultat de créatinine requis",
+      "suggested_question_fr": "Un examen avec injection est demandé. Pourriez-vous fournir le résultat de créatinine récent du patient ?"
+    }
+  ],
+  "routing": {
+    "next_action": "contact_prescriber",
+    "target_contact": "dr.emilie.richard@hopital-croix-rousse.fr",
+    "rationale_fr": "Informations cliniques ou pièces jointes manquantes — contacter le prescripteur."
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande IRM épaule gauche avec injection pour David DIALLO\n\nCher Dr Émilie RICHARD,\n\nNous accusons bonne réception de votre demande d'examen (IRM épaule gauche avec injection) pour le patient David DIALLO, adressée par Dr Émilie RICHARD.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  1. Un examen avec injection est demandé. Pourriez-vous fournir le résultat de créatinine récent du patient ?\n\nNous vous serions reconnaissants de bien vouloir nous transmettre ces informations par retour de courrier ou par téléphone.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
+  "confidence": 0.9,
+  "source": {
+    "channel": "email"
+  }
+}

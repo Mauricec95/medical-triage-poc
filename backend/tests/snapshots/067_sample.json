@@ -1,0 +1,50 @@
+{
+  "patient": {
+    "full_name": "Khadija MATHIEU",
+    "dob": "19/07/2009",
+    "sex": "F",
+    "phone": "07 37 66 66 40",
+    "email": "dr.pascale.renard@chu-lyon.fr",
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Pascale RENARD",
+    "specialty": "Gastro-entérologie",
+    "service": null,
+    "hospital_or_clinic": "CH Bourg-en-Bresse\nTél",
+    "phone": "04 66 22 97 57",
+    "email": "dr.pascale.renard@chu-lyon.fr"
+  },
+  "exam": {
+    "modality": "scanner",
+    "region": "membres inférieurs",
+    "with_injection": true,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Suspicion de thrombose veineuse profonde",
+  "required_attachments": [
+    {
+      "name": "ordonnance",
+      "present": true,
+      "notes": null
+    }
+  ],
+  "missing_fields": [
+    {
+      "field_path": "required_attachments.creatinine",
+      "reason": "scanner avec injection : résultat de créatinine requis",
+      "suggested_question_fr": "Un examen avec injection est demandé. Pourriez-vous fournir le résultat de créatinine récent du patient ?"
+    }
+  ],
+  "routing": {
+    "next_action": "contact_prescriber",
+    "target_contact": "dr.pascale.renard@chu-lyon.fr",
+    "rationale_fr": "Informations cliniques ou pièces jointes manquantes — contacter le prescripteur."
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande scanner membres inférieurs avec injection pour Khadija MATHIEU\n\nCher Dr Pascale RENARD,\n\nNous accusons bonne réception de votre demande d'examen (scanner membres inférieurs avec injection) pour le patient Khadija MATHIEU, adressée par Dr Pascale RENARD.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  1. Un examen avec injection est demandé. Pourriez-vous fournir le résultat de créatinine récent du patient ?\n\nNous vous serions reconnaissants de bien vouloir nous transmettre ces informations par retour de courrier ou par téléphone.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
+  "confidence": 0.9,
+  "source": {
+    "channel": "email"
+  }
+}

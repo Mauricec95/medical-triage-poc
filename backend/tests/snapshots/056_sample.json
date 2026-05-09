@@ -1,0 +1,44 @@
+{
+  "patient": {
+    "full_name": "Aminata BRUN",
+    "dob": "18/08/1971",
+    "sex": "F",
+    "phone": "07 53 74 44 10",
+    "email": "a.brun@wanadoo.fr",
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Philippe BOYER",
+    "specialty": "Rhumatologie",
+    "service": null,
+    "hospital_or_clinic": "CHU Saint-Étienne\nTél secrétariat",
+    "phone": "04 58 85 84 94",
+    "email": "dr.philippe.boyer@hopital-edouard-herriot.fr"
+  },
+  "exam": {
+    "modality": "scanner",
+    "region": "rachis lombaire",
+    "with_injection": false,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Lombalgies chroniques résistantes au traitement",
+  "required_attachments": [
+    {
+      "name": "ordonnance",
+      "present": true,
+      "notes": null
+    }
+  ],
+  "missing_fields": [],
+  "routing": {
+    "next_action": "schedule",
+    "target_contact": "07 53 74 44 10",
+    "rationale_fr": "Demande complète — à programmer."
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande scanner rachis lombaire sans injection pour Aminata BRUN\n\nCher Dr Philippe BOYER,\n\nNous accusons bonne réception de votre demande d'examen (scanner rachis lombaire sans injection) pour le patient Aminata BRUN, adressée par Dr Philippe BOYER.\n\nVotre demande est complète et sera traitée dans les meilleurs délais. Nous vous recontacterons pour confirmer le créneau de rendez-vous.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
+  "confidence": 0.95,
+  "source": {
+    "channel": "email"
+  }
+}

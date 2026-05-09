@@ -1,0 +1,49 @@
+{
+  "patient": {
+    "full_name": "Aïcha MARTINEZ",
+    "dob": "24/03/1997",
+    "sex": "F",
+    "phone": "06 45 66 19 46",
+    "email": "dr.sylvie.girard@hopital-edouard-herriot.fr",
+    "ssn_last4_optional": null
+  },
+  "prescriber": {
+    "full_name": "Dr Sylvie GIRARD",
+    "specialty": "Chirurgie vasculaire",
+    "service": null,
+    "hospital_or_clinic": "CHU Grenoble\nTél",
+    "phone": "04 50 44 52 50",
+    "email": "dr.sylvie.girard@hopital-edouard-herriot.fr"
+  },
+  "exam": {
+    "modality": "IRM",
+    "region": "pelvienne",
+    "with_injection": null,
+    "protocol_notes": null,
+    "urgency": "routine"
+  },
+  "clinical_indication": "Douleurs pelviennes chroniques",
+  "required_attachments": [],
+  "missing_fields": [
+    {
+      "field_path": "exam.with_injection",
+      "reason": "Injection non précisée pour cet examen",
+      "suggested_question_fr": "L'examen est-il demandé avec ou sans injection de produit de contraste ?"
+    },
+    {
+      "field_path": "required_attachments.ordonnance",
+      "reason": "Ordonnance non jointe ou non identifiée",
+      "suggested_question_fr": "Pourriez-vous joindre l'ordonnance du médecin prescripteur ?"
+    }
+  ],
+  "routing": {
+    "next_action": "contact_prescriber",
+    "target_contact": "dr.sylvie.girard@hopital-edouard-herriot.fr",
+    "rationale_fr": "Informations cliniques ou pièces jointes manquantes — contacter le prescripteur."
+  },
+  "ack_message_fr": "Objet : Accusé de réception — Demande IRM pelvienne pour Aïcha MARTINEZ\n\nCher Dr Sylvie GIRARD,\n\nNous accusons bonne réception de votre demande d'examen (IRM pelvienne) pour le patient Aïcha MARTINEZ, adressée par Dr Sylvie GIRARD.\n\nAfin de pouvoir traiter votre demande dans les meilleurs délais, nous aurions besoin des éléments suivants :\n\n  1. L'examen est-il demandé avec ou sans injection de produit de contraste ?\n  2. Pourriez-vous joindre l'ordonnance du médecin prescripteur ?\n\nNous vous serions reconnaissants de bien vouloir nous transmettre ces informations par retour de courrier ou par téléphone.\n\nNous restons à votre disposition pour toute information complémentaire.\n\nCordialement,\n\nLe secrétariat de radiologie\n[Service de radiologie — Coordonnées]",
+  "confidence": 0.8,
+  "source": {
+    "channel": "email"
+  }
+}
